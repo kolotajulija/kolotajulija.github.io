@@ -92,7 +92,18 @@
       <section class="section section-alt" id="about">
         <div class="container about-grid">
           <div class="about-media">
-            <img id="about-portrait" src="/images/portrait.svg" alt="" data-i18n-alt="about.portraitAlt" />
+            <img
+              id="about-portrait"
+              src="/images/about/portrait-760.jpg"
+              srcset="/images/about/portrait-480.jpg 480w, /images/about/portrait-760.jpg 760w, /images/about/portrait-1100.jpg 1100w"
+              sizes="(max-width: 860px) 100vw, 45vw"
+              width="760"
+              height="1013"
+              alt=""
+              data-i18n-alt="about.portraitAlt"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div class="about-text">
             <p class="eyebrow" data-i18n="about.eyebrow">About</p>
