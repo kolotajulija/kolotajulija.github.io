@@ -5,7 +5,13 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  /* запрет масштабирования жестами: остаётся только прокрутка */
+  touch-action: pan-x pan-y;
+  -webkit-text-size-adjust: 100%;
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -216,6 +222,8 @@ h1, h2, h3 {
   gap: clamp(1rem, 2.5vw, 2rem);
 }
 .work {
+  height: 100%;
+  align-content: start;
   border: 0;
   padding: 0;
   background: none;
@@ -333,15 +341,28 @@ h1, h2, h3 {
   inset: 0;
   z-index: 90;
   display: none;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: clamp(1rem, 5vw, 4rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(1rem, 5vw, 3.5rem);
   background: var(--c-overlay);
   backdrop-filter: blur(6px);
 }
 .lightbox.is-open { display: flex; }
-.lightbox-figure { margin: 0; display: grid; gap: var(--space-s); justify-items: center; max-height: 100%; }
-.lightbox-figure img { max-height: 54vh; width: auto; object-fit: contain; box-shadow: var(--shadow); }
+.lightbox-figure {
+  margin: auto;
+  display: grid;
+  gap: var(--space-s);
+  justify-items: center;
+  width: min(100%, 60rem);
+}
+.lightbox-figure img {
+  width: 100%;
+  height: clamp(15rem, 52vh, 34rem);
+  object-fit: contain;
+  box-shadow: none;
+}
 .lightbox-caption { display: grid; gap: 0.45rem; max-width: 52ch; text-align: center; }
 .lightbox-title { font-size: var(--step-2); }
 .lightbox-meta {
