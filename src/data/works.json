@@ -115,5 +115,40 @@
       "en": "made in about three weeks",
       "lv": "izgatavošanas laiks — 3 nedēļas"
     }
+  },
+  {
+    "id": "pijons",
+    "status": "order",
+    "images": [
+      {
+        "small": "images/works/pijons-1-800.jpg",
+        "large": "images/works/pijons-1-1600.jpg"
+      }
+    ],
+    "collection": {
+      "ru": "Коллекция «Мой сад»",
+      "en": "My Garden collection",
+      "lv": "Kolekcija «Mans dārzs»"
+    },
+    "title": {
+      "ru": "Пион",
+      "en": "Peony",
+      "lv": "Peonija"
+    },
+    "materials": {
+      "ru": "Серебро 925, деревянное основание",
+      "en": "Sterling silver, wooden base",
+      "lv": "925 sudrabs, koka pamatne"
+    },
+    "lead": {
+      "ru": "срок изготовления — 3 недели",
+      "en": "made in about three weeks",
+      "lv": "izgatavošanas laiks — 3 nedēļas"
+    },
+    "description": {
+      "ru": "Ещё один цветок из моего сада: раскрытый пион, бутон рядом и листья, всё выковано из серебра. Название, статус и рассказ пока временные — жду твоих слов.",
+      "en": "Another flower from my garden: an open peony, a bud beside it and leaves, all forged in silver. The title, status and story are temporary for now.",
+      "lv": "Vēl viens zieds no mana dārza: atvēries peonijas zieds, pumpurs blakus un lapas — viss kalts sudrabā. Nosaukums, statuss un stāsts pagaidām ir provizoriski."
+    }
   }
 ]
