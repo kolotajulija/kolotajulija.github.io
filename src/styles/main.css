@@ -219,11 +219,13 @@ h1, h2, h3 {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
-  gap: clamp(1rem, 2.5vw, 2rem);
+  /* между работами отступ втрое больше, чем между снимком и его подписью:
+     иначе непонятно, к какой фотографии относится текст */
+  column-gap: clamp(1rem, 2.5vw, 2rem);
+  row-gap: clamp(3.5rem, 7vw, 5.5rem);
 }
 .work {
   height: 100%;
-  align-content: start;
   border: 0;
   padding: 0;
   background: none;
@@ -231,8 +233,11 @@ h1, h2, h3 {
   text-align: left;
   cursor: pointer;
   display: grid;
-  gap: 0.85rem;
+  /* снимок, затем подпись постоянной высоты — карточки заканчиваются на одном уровне */
+  grid-template-rows: auto minmax(3.4rem, auto);
+  gap: 0.7rem;
 }
+.work-caption { display: grid; gap: 0.3rem; align-content: start; }
 .work-frame {
   position: relative;
   overflow: hidden;

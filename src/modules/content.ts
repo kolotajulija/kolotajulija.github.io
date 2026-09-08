@@ -89,7 +89,11 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
       meta.className = 'work-meta'
       meta.textContent = workMaterials(work)
 
-      button.append(frame, title, meta)
+      const caption = document.createElement('span')
+      caption.className = 'work-caption'
+      caption.append(title, meta)
+
+      button.append(frame, caption)
       button.addEventListener('click', () => onOpen(firstSlide))
       return button
     }),
