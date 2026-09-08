@@ -224,13 +224,13 @@ h1, h2, h3 {
 .hero::before {
   content: '';
   position: absolute;
-  inset: -30% 40% 30% -10%;
+  inset: -35% 25% 25% -12%;
   background: radial-gradient(closest-side, var(--c-accent-soft), transparent 70%);
   pointer-events: none;
 }
-.hero-inner { position: relative; max-width: 40ch; }
-.hero-title { font-size: var(--step-3); margin-bottom: var(--space-s); }
-.hero-lead { color: var(--c-text-dim); font-size: var(--step-1); max-width: 34ch; }
+.hero-inner { position: relative; max-width: min(100%, 54rem); }
+.hero-title { font-size: var(--step-3); margin-bottom: var(--space-s); max-width: 16ch; }
+.hero-lead { color: var(--c-text-dim); font-size: var(--step-1); max-width: 42ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-s); margin-top: var(--space-m); }
 
 .btn {
@@ -416,9 +416,9 @@ h1, h2, h3 {
 .lightbox-figure {
   margin: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   grid-template-areas:
-    'image thumbs'
+    'thumbs image'
     'caption caption';
   gap: var(--space-s);
   justify-items: center;
@@ -489,8 +489,8 @@ h1, h2, h3 {
   overscroll-behavior: contain;
 }
 .lightbox-thumb {
-  width: 3.4rem;
-  height: 3.4rem;
+  width: clamp(3.4rem, 5vw, 5.4rem);
+  height: clamp(3.4rem, 5vw, 5.4rem);
   padding: 0;
   border: 1px solid transparent;
   background: none;
