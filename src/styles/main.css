@@ -87,11 +87,23 @@ h1, h2, h3 {
   min-height: 4.75rem;
 }
 
-.brand { display: flex; align-items: center; margin-right: auto; color: var(--c-text); }
-.brand-logo { display: block; width: auto; height: 2.7rem; }
-.brand-logo-mark { display: none; height: 2.3rem; }
-.brand-wordmark { fill: currentColor; font-family: var(--font-display); font-weight: 300; }
-.brand-signature { fill: var(--c-text-dim); font-family: var(--font-body); font-weight: 300; letter-spacing: 0.02em; }
+.brand { display: flex; align-items: center; gap: 0.75rem; margin-right: auto; color: var(--c-text); }
+.brand-mark { display: block; width: auto; height: 2.4rem; flex: none; }
+.brand-text { display: grid; }
+.brand-name {
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 3.6vw, var(--step-1));
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.brand-sub {
+  font-size: clamp(0.5rem, 1.9vw, 0.66rem);
+  letter-spacing: clamp(0.16em, 0.5vw, 0.3em);
+  text-transform: uppercase;
+  color: var(--c-text-dim);
+  white-space: nowrap;
+}
 
 .nav-list {
   display: flex;
@@ -320,9 +332,12 @@ body.is-locked { overflow: hidden; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- Мобильные ---------- */
-@media (max-width: 620px) {
-  .brand-logo-full { display: none; }
-  .brand-logo-mark { display: block; }
+@media (max-width: 480px) {
+  .brand { gap: 0.55rem; }
+  .brand-mark { height: 2rem; }
+  .header-actions { gap: 0.1rem; }
+  .lang-btn { padding: 0.3rem 0.22rem; font-size: 0.62rem; letter-spacing: 0.1em; }
+  .theme-toggle, .nav-toggle { width: 2.15rem; height: 2.15rem; }
 }
 
 @media (max-width: 860px) {
