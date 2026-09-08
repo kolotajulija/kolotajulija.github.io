@@ -3,14 +3,37 @@
     "id": "lilija",
     "status": "available",
     "images": [
-      { "small": "images/works/lilija-2-800.jpg", "large": "images/works/lilija-2-1600.jpg" },
-      { "small": "images/works/lilija-3-800.jpg", "large": "images/works/lilija-3-1600.jpg" },
-      { "small": "images/works/lilija-4-800.jpg", "large": "images/works/lilija-4-1600.jpg" },
-      { "small": "images/works/lilija-1-800.jpg", "large": "images/works/lilija-1-1600.jpg" },
-      { "small": "images/works/lilija-5-800.jpg", "large": "images/works/lilija-5-1600.jpg" }
+      {
+        "small": "images/works/lilija-1-800.jpg",
+        "large": "images/works/lilija-1-1600.jpg"
+      },
+      {
+        "small": "images/works/lilija-2-800.jpg",
+        "large": "images/works/lilija-2-1600.jpg"
+      },
+      {
+        "small": "images/works/lilija-3-800.jpg",
+        "large": "images/works/lilija-3-1600.jpg"
+      },
+      {
+        "small": "images/works/lilija-4-800.jpg",
+        "large": "images/works/lilija-4-1600.jpg"
+      },
+      {
+        "small": "images/works/lilija-5-800.jpg",
+        "large": "images/works/lilija-5-1600.jpg"
+      }
     ],
-    "title": { "ru": "Кольцо-цветок", "en": "Flower ring", "lv": "Zieda gredzens" },
-    "materials": { "ru": "Серебро 925, вставка", "en": "Sterling silver, set stone", "lv": "925 sudrabs, iestrādāts akmens" },
+    "title": {
+      "ru": "Кольцо-цветок",
+      "en": "Flower ring",
+      "lv": "Zieda gredzens"
+    },
+    "materials": {
+      "ru": "Серебро 925, вставка",
+      "en": "Sterling silver, set stone",
+      "lv": "925 sudrabs, iestrādāts akmens"
+    },
     "description": {
       "ru": "Здесь будет твой рассказ об этой работе: с чего она началась и что в ней для тебя главное.",
       "en": "Your own story about this piece will live here: where it started and what matters most in it.",
