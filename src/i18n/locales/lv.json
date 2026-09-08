@@ -13,7 +13,9 @@
     "process": "Process",
     "testimonials": "Atsauksmes",
     "contact": "Kontakti",
-    "skip": "Pāriet uz saturu"
+    "skip": "Pāriet uz saturu",
+    "theme": "Tēma",
+    "language": "Valoda"
   },
   "hero": {
     "eyebrow": "Laikmetīga rota",

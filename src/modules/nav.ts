@@ -21,6 +21,17 @@ export function initNav(): void {
   onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
 
+  // на телефоне шапка тесная: кнопка темы уезжает внутрь бургер-меню
+  const theme = document.getElementById('theme-toggle')!
+  const actions = document.querySelector('.header-actions')!
+  const narrow = window.matchMedia('(max-width: 860px)')
+  const placeTheme = () => {
+    if (narrow.matches) nav.append(theme)
+    else actions.prepend(theme)
+  }
+  placeTheme()
+  narrow.addEventListener('change', placeTheme)
+
   const sections = links
     .map((link) => document.querySelector<HTMLElement>(link.hash))
     .filter((el): el is HTMLElement => Boolean(el))

@@ -13,7 +13,9 @@
     "process": "Process",
     "testimonials": "Words",
     "contact": "Contact",
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "theme": "Theme",
+    "language": "Language"
   },
   "hero": {
     "eyebrow": "Contemporary jewellery",

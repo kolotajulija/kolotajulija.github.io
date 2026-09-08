@@ -139,21 +139,54 @@ h1, h2, h3 {
 
 .header-actions { display: flex; align-items: center; gap: var(--space-xs); }
 
-.lang-switch { display: flex; gap: 0.15rem; }
+.lang-switch { position: relative; }
+.lang-current {
+  display: grid;
+  place-items: center;
+  min-width: 2.9rem;
+  height: 2.9rem;
+  padding: 0 0.5rem;
+  background: none;
+  border: var(--border-thin);
+  border-radius: var(--radius);
+  color: var(--c-text);
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+.lang-current:hover { border-color: var(--c-accent); color: var(--c-accent); }
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  z-index: 60;
+  display: grid;
+  margin: 0;
+  padding: 0.25rem;
+  list-style: none;
+  background: var(--c-bg);
+  border: var(--border-thin);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
 .lang-btn {
+  width: 100%;
   background: none;
   border: 0;
   color: var(--c-text-dim);
   font: inherit;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   letter-spacing: 0.14em;
-  padding: 0.35rem 0.45rem;
+  padding: 0.5rem 0.9rem;
   cursor: pointer;
   transition: color var(--transition);
 }
 .lang-btn:hover { color: var(--c-text); }
 .lang-btn[aria-pressed='true'] { color: var(--c-accent); }
 
+.theme-label { display: none; }
 .theme-toggle, .nav-toggle {
   display: grid;
   place-items: center;
@@ -365,17 +398,22 @@ h1, h2, h3 {
 .lightbox-figure {
   margin: auto;
   display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'image thumbs'
+    'caption caption';
   gap: var(--space-s);
   justify-items: center;
   width: min(100%, 60rem);
 }
 .lightbox-figure img {
+  grid-area: image;
   width: 100%;
   height: clamp(15rem, 52vh, 34rem);
   object-fit: contain;
   box-shadow: none;
 }
-.lightbox-caption { display: grid; gap: 0.45rem; max-width: 52ch; text-align: center; }
+.lightbox-caption { grid-area: caption; display: grid; gap: 0.45rem; max-width: 52ch; text-align: center; }
 .lightbox-title { font-size: var(--step-2); }
 .lightbox-meta {
   margin: 0;
@@ -422,7 +460,16 @@ h1, h2, h3 {
 .lightbox-nav[hidden] { display: none; }
 
 /* полоска миниатюр — сразу видно, сколько ракурсов внутри */
-.lightbox-thumbs { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+/* дополнительные кадры стоят колонкой справа от снимка */
+.lightbox-thumbs {
+  grid-area: thumbs;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: clamp(15rem, 52vh, 34rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
 .lightbox-thumb {
   width: 3.4rem;
   height: 3.4rem;
@@ -444,6 +491,23 @@ body.is-locked { overflow: hidden; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- Мобильные ---------- */
+/* на узких экранах колонка справа съела бы снимок — там миниатюры снизу */
+@media (max-width: 640px) {
+  .lightbox-figure {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'image'
+      'thumbs'
+      'caption';
+  }
+  .lightbox-thumbs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: none;
+  }
+}
+
 @media (max-width: 480px) {
   .brand { gap: 0.55rem; }
   .brand-mark { height: 2rem; }
@@ -466,6 +530,29 @@ body.is-locked { overflow: hidden; }
   }
   .site-nav.is-open { transform: none; }
   .nav-list { flex-direction: column; gap: var(--space-s); font-size: var(--step-1); }
+
+  /* кнопка темы внутри меню становится обычной строкой с подписью */
+  .site-nav .theme-toggle {
+    width: auto;
+    height: auto;
+    justify-content: start;
+    grid-auto-flow: column;
+    gap: 0.7rem;
+    margin-top: var(--space-m);
+    padding: 0.35rem 0;
+    border: 0;
+    border-top: var(--border-thin);
+    border-radius: 0;
+    padding-top: var(--space-m);
+    width: 100%;
+  }
+  .site-nav .theme-label {
+    display: block;
+    font-size: var(--step--1);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-text-dim);
+  }
 }
 
 /* ---------- Отзывы ---------- */
