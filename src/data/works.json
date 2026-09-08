@@ -4,20 +4,20 @@
     "status": "sold",
     "images": [
       {
-        "small": "images/works/lilija-2-800.jpg",
-        "large": "images/works/lilija-2-1600.jpg"
-      },
-      {
         "small": "images/works/lilija-1-800.jpg",
         "large": "images/works/lilija-1-1600.jpg"
       },
       {
-        "small": "images/works/lilija-4-800.jpg",
-        "large": "images/works/lilija-4-1600.jpg"
+        "small": "images/works/lilija-2-800.jpg",
+        "large": "images/works/lilija-2-1600.jpg"
       },
       {
-        "small": "images/works/lilija-5-800.jpg",
-        "large": "images/works/lilija-5-1600.jpg"
+        "small": "images/works/lilija-3-800.jpg",
+        "large": "images/works/lilija-3-1600.jpg"
+      },
+      {
+        "small": "images/works/lilija-4-800.jpg",
+        "large": "images/works/lilija-4-1600.jpg"
       }
     ],
     "title": {
@@ -31,9 +31,9 @@
       "lv": "925 sudrabs, cirkons"
     },
     "description": {
-      "ru": "Иногда так хочется продлить цветение — и я попробовала сделать это в серебре. Лилия издавна означает чистоту и возрождение: христианская традиция связала её с Девой Марией, геральдика — с благородством, а весеннее цветение читали как обещание нового начала. Мне хотелось удержать именно это обещание. Теперь эта лилия вечна.",
-      "en": "Sometimes you long to make the flowering last — so I tried to do it in silver. The lily has always stood for purity and rebirth: Christian tradition tied it to the Virgin Mary, heraldry to nobility, and its flowering in spring was read as the promise of a new beginning. It was that promise I wanted to hold on to. This lily will not fade.",
-      "lv": "Reizēm tā gribas pagarināt ziedēšanu — un es to mēģināju izdarīt sudrabā. Lilija jau sen nozīmē šķīstību un atdzimšanu: kristīgā tradīcija to saistīja ar Jaunavu Mariju, heraldika — ar cēlumu, bet pavasara ziedēšanu lasīja kā jauna sākuma solījumu. Tieši šo solījumu man gribējās noturēt. Šī lilija vairs nenovītīs."
+      "ru": "Иногда так хочется продлить цветение — и я попробовала сделать это в серебре. Лилия издавна означает чистоту и возрождение: христианская традиция связала её с Девой Марией, геральдика — с благородством, а весеннее цветение читали как обещание нового начала. Мне хотелось удержать именно это обещание — вечное цветение женской души. Эта лилия больше не отцветёт.",
+      "en": "Sometimes you long to make the flowering last — so I tried to do it in silver. The lily has always stood for purity and rebirth: Christian tradition tied it to the Virgin Mary, heraldry to nobility, and its flowering in spring was read as the promise of a new beginning. It was that promise I wanted to hold on to — the eternal flowering of a woman’s soul. This lily will not fade.",
+      "lv": "Reizēm tā gribas pagarināt ziedēšanu — un es to mēģināju izdarīt sudrabā. Lilija jau sen nozīmē šķīstību un atdzimšanu: kristīgā tradīcija to saistīja ar Jaunavu Mariju, heraldika — ar cēlumu, bet pavasara ziedēšanu lasīja kā jauna sākuma solījumu. Tieši šo solījumu man gribējās noturēt — sievietes dvēseles mūžīgo ziedēšanu. Šī lilija vairs nenovītīs."
     }
   }
 ]
