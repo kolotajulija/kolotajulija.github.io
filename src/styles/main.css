@@ -400,13 +400,22 @@ h1, h2, h3 {
   background: color-mix(in srgb, var(--c-bg) 72%, transparent);
   backdrop-filter: blur(8px);
   color: var(--c-text);
-  font-size: 1.9rem;
-  line-height: 1;
   cursor: pointer;
   transition: color var(--transition), border-color var(--transition), background var(--transition);
 }
+/* векторные иконки центруются по своей форме, а не по строке шрифта */
+.icon-ui {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .lightbox-close:hover, .lightbox-nav:hover { color: var(--c-accent); border-color: var(--c-accent); }
-.lightbox-close { top: 1rem; right: 1.2rem; font-size: 1.6rem; }
+.lightbox-close { top: 1rem; right: 1.2rem; }
 .lightbox-nav { top: 50%; transform: translateY(-50%); }
 .lightbox-prev { left: clamp(0.5rem, 2.5vw, 2.5rem); }
 .lightbox-next { right: clamp(0.5rem, 2.5vw, 2.5rem); }
