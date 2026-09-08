@@ -1,21 +1,37 @@
-import { asset, getWorks, workCaption } from './content'
-import { getLang } from '../i18n'
+import {
+  asset,
+  getSlides,
+  workDescription,
+  workMaterials,
+  workStatus,
+  workTitle,
+} from './content'
 
-/** Полноэкранный просмотр работ: стрелки, Esc, клик по фону. */
+/** Полноэкранный просмотр: стрелки идут по всем снимкам всех работ подряд. */
 export function createLightbox(): (index: number) => void {
   const root = document.getElementById('lightbox')!
   const image = document.getElementById('lightbox-image') as HTMLImageElement
-  const caption = document.getElementById('lightbox-caption')!
+  const title = document.getElementById('lightbox-title')!
+  const meta = document.getElementById('lightbox-meta')!
+  const description = document.getElementById('lightbox-description')!
   let index = 0
   let lastFocused: HTMLElement | null = null
 
   const show = (i: number) => {
-    const works = getWorks()
-    index = (i + works.length) % works.length
-    const work = works[index]
-    image.src = asset(work.image)
-    image.alt = work.title[getLang()] ?? work.title.en ?? ''
-    caption.textContent = `${image.alt} — ${workCaption(work)}`
+    const slides = getSlides()
+    index = (i + slides.length) % slides.length
+    const { work, image: picture, position, total } = slides[index]
+    image.src = asset(picture.large)
+    image.alt = workTitle(work)
+    title.textContent = workTitle(work)
+    meta.textContent = [
+      workMaterials(work),
+      workStatus(work),
+      total > 1 ? `${position} / ${total}` : '',
+    ]
+      .filter(Boolean)
+      .join(' · ')
+    description.textContent = workDescription(work)
   }
 
   const open = (i: number) => {

@@ -3,9 +3,20 @@ import contactsData from '../data/contacts.json'
 import { getLang, t, tRaw, type LangCode } from '../i18n'
 
 type Localized = Partial<Record<LangCode, string>>
-type Work = { id: string; image: string; year: string; title: Localized; materials: Localized }
+type WorkImage = { small: string; large: string }
+type Work = {
+  id: string
+  status: 'available' | 'sold'
+  images: WorkImage[]
+  title: Localized
+  materials: Localized
+  description: Localized
+}
 type Contact = { key: string; value: string; href: string }
 type Step = { title: string; text: string }
+
+/** Один кадр в лайтбоксе: сам снимок и работа, которой он принадлежит. */
+export type Slide = { work: Work; image: WorkImage; position: number; total: number }
 
 const works = worksData as Work[]
 const contacts = contactsData as Contact[]
@@ -19,43 +30,67 @@ function localized(value: Localized): string {
   return value[getLang()] ?? value.en ?? ''
 }
 
-export function getWorks(): Work[] {
-  return works
+export const workTitle = (w: Work) => localized(w.title)
+export const workMaterials = (w: Work) => localized(w.materials)
+export const workDescription = (w: Work) => localized(w.description)
+export const workStatus = (w: Work) => t(w.status === 'sold' ? 'gallery.sold' : 'gallery.available')
+
+/** Все снимки всех работ одной лентой — по ней и ходят стрелки лайтбокса. */
+export function getSlides(): Slide[] {
+  return works.flatMap((work) =>
+    work.images.map((image, i) => ({ work, image, position: i + 1, total: work.images.length })),
+  )
 }
 
-export function workCaption(work: Work): string {
-  const parts = [localized(work.materials), work.year].filter(Boolean)
-  return parts.join(' · ')
-}
-
-export function renderGallery(onOpen: (index: number) => void): void {
+export function renderGallery(onOpen: (slideIndex: number) => void): void {
   const grid = document.getElementById('gallery-grid')!
+  let slideIndex = 0
+
   grid.replaceChildren(
-    ...works.map((work, index) => {
+    ...works.map((work) => {
+      const firstSlide = slideIndex
+      slideIndex += work.images.length
+
       const button = document.createElement('button')
       button.type = 'button'
       button.className = 'work'
-      button.setAttribute('aria-label', `${localized(work.title)} — ${t('gallery.open')}`)
+      button.setAttribute('aria-label', `${workTitle(work)} — ${t('gallery.open')}`)
 
       const frame = document.createElement('div')
       frame.className = 'work-frame'
+
       const img = document.createElement('img')
-      img.src = asset(work.image)
-      img.alt = localized(work.title)
+      const cover = work.images[0]
+      img.src = asset(cover.small)
+      img.srcset = `${asset(cover.small)} 800w, ${asset(cover.large)} 1600w`
+      img.sizes = '(max-width: 860px) 100vw, 30vw'
+      img.alt = workTitle(work)
       img.loading = 'lazy'
       img.decoding = 'async'
       frame.append(img)
 
+      const status = document.createElement('span')
+      status.className = `work-status work-status-${work.status}`
+      status.textContent = workStatus(work)
+      frame.append(status)
+
+      if (work.images.length > 1) {
+        const count = document.createElement('span')
+        count.className = 'work-count'
+        count.textContent = String(work.images.length)
+        frame.append(count)
+      }
+
       const title = document.createElement('span')
       title.className = 'work-title'
-      title.textContent = localized(work.title)
+      title.textContent = workTitle(work)
 
       const meta = document.createElement('span')
       meta.className = 'work-meta'
-      meta.textContent = workCaption(work)
+      meta.textContent = workMaterials(work)
 
       button.append(frame, title, meta)
-      button.addEventListener('click', () => onOpen(index))
+      button.addEventListener('click', () => onOpen(firstSlide))
       return button
     }),
   )

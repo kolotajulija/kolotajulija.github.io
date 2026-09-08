@@ -25,7 +25,9 @@
   "gallery": {
     "eyebrow": "Izlase",
     "title": "Galerija",
-    "open": "Atvērt attēlu"
+    "open": "Atvērt darbu",
+    "available": "Pieejams",
+    "sold": "Pārdots"
   },
   "about": {
     "eyebrow": "Iepazīšanās",

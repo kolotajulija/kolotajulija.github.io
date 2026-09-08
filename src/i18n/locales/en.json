@@ -25,7 +25,9 @@
   "gallery": {
     "eyebrow": "Selected works",
     "title": "Gallery",
-    "open": "Open image"
+    "open": "Open the piece",
+    "available": "Available",
+    "sold": "Sold"
   },
   "about": {
     "eyebrow": "Get to know me",
