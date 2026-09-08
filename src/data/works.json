@@ -38,7 +38,7 @@
   },
   {
     "id": "cepj",
-    "status": "available",
+    "status": "sold",
     "images": [
       {
         "small": "images/works/cepj-4-800.jpg",
@@ -66,19 +66,19 @@
       }
     ],
     "title": {
-      "ru": "Цепь",
-      "en": "Chain",
-      "lv": "Ķēde"
+      "ru": "Витая цепь",
+      "en": "Twisted chain",
+      "lv": "Vītā ķēde"
     },
     "materials": {
-      "ru": "Серебро",
-      "en": "Silver",
-      "lv": "Sudrabs"
+      "ru": "Серебро 925",
+      "en": "Sterling silver",
+      "lv": "925 sudrabs"
     },
     "description": {
-      "ru": "Здесь будет твой рассказ об этой работе. Название, материалы и статус тоже пока временные.",
-      "en": "Your own story about this piece will live here. The title, materials and status are temporary too.",
-      "lv": "Šeit būs tavs stāsts par šo darbu. Nosaukums, materiāli un statuss pagaidām arī ir provizoriski."
+      "ru": "Эту цепь невозможно разорвать — все звенья спаяны, ни одного разъёмного. Она прочная и надёжная, и время ей не помеха. Так мне хотелось передать силу самой природы: её вечность и несокрушимость.",
+      "en": "This chain cannot be broken — every link is soldered shut, not one of them opens. It is strong and dependable, and time has no hold on it. That is how I wanted to convey the force of nature itself: its permanence and its refusal to be broken.",
+      "lv": "Šo ķēdi nav iespējams pārraut — visi posmi ir salodēti, neviens no tiem neveras vaļā. Tā ir izturīga un droša, un laikam pār to nav varas. Tā es gribēju nodot pašas dabas spēku: tās mūžību un nesalaužamību."
     }
   }
 ]
