@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="276 318 58 58">
-<rect x="276" y="318" width="58" height="58" rx="9" fill="#EDEBE6" />
-
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="276 318 58 58" role="img" aria-label="KOLOTA">
 <defs>
 <filter id="filter-remove-color" x="0%" y="0%" width="100%" height="100%">
 <feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
@@ -43,5 +42,4 @@
 <path fill-rule="nonzero" fill="rgb(8.235168%, 9.01947%, 10.195923%)" fill-opacity="1" d="M 307.550781 403.273438 C 307.386719 397.960938 311.765625 393.8125 316.355469 394.578125 C 316.066406 400.246094 311.511719 404.167969 307.550781 403.273438 Z M 307.550781 403.273438 "/>
 <path fill-rule="nonzero" fill="rgb(8.235168%, 9.01947%, 10.195923%)" fill-opacity="1" d="M 306.449219 405.472656 C 302.121094 406.691406 297.820312 403.949219 297.511719 400.023438 C 302.222656 399.097656 306.371094 402.035156 306.449219 405.472656 Z M 306.449219 405.472656 "/>
 <path fill-rule="nonzero" fill="rgb(8.235168%, 9.01947%, 10.195923%)" fill-opacity="1" d="M 307.550781 395.578125 C 306.550781 392.035156 308.796875 388.515625 312.007812 388.261719 C 312.765625 392.117188 310.363281 395.515625 307.550781 395.578125 Z M 307.550781 395.578125 "/>
-
 </svg>
