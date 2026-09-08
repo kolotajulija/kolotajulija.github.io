@@ -1,7 +1,7 @@
 [
   {
     "id": "lilija",
-    "status": "available",
+    "status": "sold",
     "images": [
       {
         "small": "images/works/lilija-1-800.jpg",
@@ -21,19 +21,19 @@
       }
     ],
     "title": {
-      "ru": "Кольцо-цветок",
-      "en": "Flower ring",
-      "lv": "Zieda gredzens"
+      "ru": "Лилия",
+      "en": "Lily",
+      "lv": "Lilija"
     },
     "materials": {
-      "ru": "Серебро 925, вставка",
-      "en": "Sterling silver, set stone",
-      "lv": "925 sudrabs, iestrādāts akmens"
+      "ru": "Серебро 925, циркон",
+      "en": "Sterling silver, zircon",
+      "lv": "925 sudrabs, cirkons"
     },
     "description": {
-      "ru": "Здесь будет твой рассказ об этой работе: с чего она началась и что в ней для тебя главное.",
-      "en": "Your own story about this piece will live here: where it started and what matters most in it.",
-      "lv": "Šeit būs tavs stāsts par šo darbu: ar ko tas sākās un kas tajā ir galvenais."
+      "ru": "Как иногда хочется продлить цветение — я попыталась сделать это в серебре. Теперь эта лилия вечна. В культуре лилия издавна означает чистоту и возрождение: христианская традиция связывает её с Девой Марией, геральдика сделала её знаком благородства, а весеннее цветение читали как знак нового начала. В серебре это начало не заканчивается.",
+      "en": "Sometimes you wish the flowering could last longer — I tried to make it last in silver. Now this lily is eternal. The lily has long stood for purity and rebirth: Christian tradition links it to the Virgin Mary, heraldry made it a mark of nobility, and its spring flowering was read as a sign of a new beginning. In silver that beginning does not end.",
+      "lv": "Reizēm tā gribas pagarināt ziedēšanu — es mēģināju to izdarīt sudrabā. Tagad šī lilija ir mūžīga. Lilija jau sen nozīmē šķīstību un atdzimšanu: kristīgā tradīcija to saista ar Jaunavu Mariju, heraldikā tā kļuva par cēluma zīmi, bet pavasara ziedēšanu lasīja kā jauna sākuma zīmi. Sudrabā šis sākums nebeidzas."
     }
   }
 ]
