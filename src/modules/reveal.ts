@@ -1,6 +1,6 @@
 /** Мягкое появление блоков при прокрутке. */
 export function initReveal(): void {
-  const targets = document.querySelectorAll<HTMLElement>('.section-head, .work, .about-media, .about-text, .process-list li, .contact-list li')
+  const targets = document.querySelectorAll<HTMLElement>('.section-head, .work, .about-media, .about-text, .process-list li, .testimonial-list li, .contact-list li')
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
   const observer = new IntersectionObserver(

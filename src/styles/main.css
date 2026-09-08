@@ -342,3 +342,34 @@ body.is-locked { overflow: hidden; }
   .site-nav.is-open { transform: none; }
   .nav-list { flex-direction: column; gap: var(--space-s); font-size: var(--step-1); }
 }
+
+/* ---------- Отзывы ---------- */
+.testimonial-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+.testimonial { margin: 0; display: grid; gap: var(--space-s); height: 100%; }
+.testimonial blockquote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-style: italic;
+  line-height: 1.45;
+  position: relative;
+  padding-top: var(--space-s);
+}
+.testimonial blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.55em;
+  left: -0.1em;
+  font-size: 3.4rem;
+  color: var(--c-accent);
+  opacity: 0.5;
+}
+.testimonial figcaption { display: grid; gap: 0.15rem; align-content: end; }
+.testimonial-author { font-size: var(--step--1); letter-spacing: 0.16em; text-transform: uppercase; }
+.testimonial-note { font-size: var(--step--1); color: var(--c-text-dim); }

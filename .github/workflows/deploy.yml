@@ -27,13 +27,13 @@ jobs:
 
       - run: npm ci
 
-      # Сайт публикуется по адресу https://<user>.github.io/<repo>/,
-      # поэтому Vite собирается с base = /<repo>/.
-      # Если позже подключим свой домен или репозиторий <user>.github.io —
-      # заменить на: BASE_PATH: /
+      # Репозиторий называется kolotajulija.github.io, поэтому сайт живёт
+      # в корне: https://kolotajulija.github.io/ — base остаётся /.
+      # Если код переедет в обычный репозиторий, здесь нужно будет
+      # поставить BASE_PATH: /<имя-репозитория>/
       - run: npm run build
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          BASE_PATH: /
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -107,3 +107,38 @@ export function renderContacts(): void {
     }),
   )
 }
+
+type Testimonial = { quote: string; author: string; note?: string }
+
+export function renderTestimonials(): void {
+  const list = document.getElementById('testimonial-list')
+  if (!list) return
+  const items = tRaw<Testimonial[]>('testimonials.items') ?? []
+  list.replaceChildren(
+    ...items.map((item) => {
+      const li = document.createElement('li')
+      const figure = document.createElement('figure')
+      figure.className = 'testimonial'
+
+      const quote = document.createElement('blockquote')
+      quote.textContent = item.quote
+
+      const caption = document.createElement('figcaption')
+      const author = document.createElement('span')
+      author.className = 'testimonial-author'
+      author.textContent = item.author
+      caption.append(author)
+
+      if (item.note) {
+        const note = document.createElement('span')
+        note.className = 'testimonial-note'
+        note.textContent = item.note
+        caption.append(note)
+      }
+
+      figure.append(quote, caption)
+      li.append(figure)
+      return li
+    }),
+  )
+}

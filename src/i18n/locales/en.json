@@ -8,6 +8,7 @@
     "gallery": "Gallery",
     "about": "About",
     "process": "Process",
+    "testimonials": "Words",
     "contact": "Contact",
     "skip": "Skip to content"
   },
@@ -37,6 +38,15 @@
       { "title": "Metal", "text": "Sterling silver and gold, worked by hand: sawing, forging, soldering, filing." },
       { "title": "Stone", "text": "Stones are chosen one by one and set to suit the character of the metal." },
       { "title": "Finish", "text": "Polishing, patina and a final check — each piece exists in a single copy." }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "In their words",
+    "title": "What people say",
+    "items": [
+      { "quote": "Placeholder review. A sentence or two from a client about the piece and about working together.", "author": "Client name", "note": "commissioned ring, 2024" },
+      { "quote": "A second placeholder review — replace with a real one when you have it.", "author": "Client name", "note": "earrings, 2023" },
+      { "quote": "A third one. Three short quotes read better than one long one.", "author": "Client name", "note": "wedding rings, 2023" }
     ]
   },
   "contact": {

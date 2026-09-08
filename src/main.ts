@@ -4,7 +4,7 @@ import { getLang, initI18n, onLangChange, setLang } from './i18n'
 import { initTheme } from './modules/theme'
 import { initNav } from './modules/nav'
 import { initReveal } from './modules/reveal'
-import { renderContacts, renderGallery, renderProcess } from './modules/content'
+import { renderContacts, renderGallery, renderProcess, renderTestimonials } from './modules/content'
 import { createLightbox } from './modules/lightbox'
 
 function renderLangSwitch(): void {
@@ -32,6 +32,7 @@ function main(): void {
     renderLangSwitch()
     renderGallery(openLightbox)
     renderProcess()
+    renderTestimonials()
     renderContacts()
   }
 
