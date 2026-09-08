@@ -160,7 +160,7 @@ h1, h2, h3 {
 :root[data-theme='dark'] .icon-moon { display: none; }
 :root[data-theme='light'] .icon-sun { display: none; }
 
-.nav-toggle { display: none; flex-direction: column; gap: 4px; }
+.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 4px; }
 .nav-toggle span { width: 16px; height: 1px; background: currentColor; transition: transform var(--transition), opacity var(--transition); }
 
 /* ---------- Hero ---------- */
