@@ -1,5 +1,7 @@
 [
-  { "key": "email", "value": "hello@example.com", "href": "mailto:hello@example.com" },
-  { "key": "instagram", "value": "@julijakolota", "href": "https://instagram.com/" },
-  { "key": "location", "value": "Riga, Latvia", "href": "" }
+  {
+    "key": "email",
+    "value": "kolotajulija@gmail.com",
+    "href": "mailto:kolotajulija@gmail.com"
+  }
 ]
