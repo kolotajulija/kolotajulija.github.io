@@ -7,7 +7,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 6.5rem;
   /* запрет масштабирования жестами: остаётся только прокрутка */
   touch-action: pan-x pan-y;
   -webkit-text-size-adjust: 100%;
@@ -90,29 +90,20 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   gap: var(--space-m);
-  min-height: 4.75rem;
+  min-height: 6.2rem;
 }
 
-.brand { display: flex; align-items: center; gap: 0.75rem; margin-right: auto; color: var(--c-text); }
-.brand-mark { display: block; width: auto; height: 2.4rem; flex: none; }
+.brand { display: flex; align-items: center; margin-right: auto; }
+.brand-logo {
+  display: block;
+  width: auto;
+  /* по брендбуку ниже 120 пикселей ширины подпись не читается,
+     поэтому держим логотип крупнее этого порога */
+  height: clamp(3.6rem, 7vw, 4.4rem);
+}
 /* два готовых файла логотипа вместо выворотки фильтром */
 :root[data-theme='dark'] .logo-on-light,
 :root[data-theme='light'] .logo-on-dark { display: none; }
-.brand-text { display: grid; }
-.brand-name {
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 3.6vw, var(--step-1));
-  line-height: 1.05;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-}
-.brand-sub {
-  font-size: clamp(0.5rem, 1.9vw, 0.66rem);
-  letter-spacing: clamp(0.16em, 0.5vw, 0.3em);
-  text-transform: uppercase;
-  color: var(--c-text-dim);
-  white-space: nowrap;
-}
 
 .nav-list {
   display: flex;
@@ -527,8 +518,6 @@ body.is-locked { overflow: hidden; }
 }
 
 @media (max-width: 480px) {
-  .brand { gap: 0.55rem; }
-  .brand-mark { height: 2rem; }
   .header-actions { gap: 0.1rem; }
   .lang-btn { padding: 0.3rem 0.22rem; font-size: 0.62rem; letter-spacing: 0.1em; }
   .theme-toggle, .nav-toggle { width: 2.15rem; height: 2.15rem; }
@@ -539,7 +528,7 @@ body.is-locked { overflow: hidden; }
   .nav-toggle { display: flex; }
   .site-nav {
     position: fixed;
-    inset: 4.75rem 0 auto;
+    inset: 6.2rem 0 auto;
     background: var(--c-bg);
     border-bottom: var(--border-thin);
     padding: var(--space-m) 1.25rem var(--space-l);
