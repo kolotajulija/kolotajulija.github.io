@@ -340,7 +340,7 @@ h1, h2, h3 {
 }
 .lightbox.is-open { display: flex; }
 .lightbox-figure { margin: 0; display: grid; gap: var(--space-s); justify-items: center; max-height: 100%; }
-.lightbox-figure img { max-height: 62vh; width: auto; object-fit: contain; box-shadow: var(--shadow); }
+.lightbox-figure img { max-height: 54vh; width: auto; object-fit: contain; box-shadow: var(--shadow); }
 .lightbox-caption { display: grid; gap: 0.45rem; max-width: 52ch; text-align: center; }
 .lightbox-title { font-size: var(--step-2); }
 .lightbox-meta {
@@ -353,19 +353,44 @@ h1, h2, h3 {
 .lightbox-description { margin: 0; color: var(--c-text-dim); line-height: 1.65; }
 .lightbox-close, .lightbox-nav {
   position: absolute;
-  background: none;
-  border: 0;
-  color: var(--c-text-dim);
-  font-size: 2.4rem;
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 0;
+  border: var(--border-thin);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--c-bg) 72%, transparent);
+  backdrop-filter: blur(8px);
+  color: var(--c-text);
+  font-size: 1.9rem;
   line-height: 1;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  transition: color var(--transition);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
 }
-.lightbox-close:hover, .lightbox-nav:hover { color: var(--c-accent); }
-.lightbox-close { top: 1rem; right: 1.2rem; font-size: 2rem; }
-.lightbox-prev { left: 0.5rem; }
-.lightbox-next { right: 0.5rem; }
+.lightbox-close:hover, .lightbox-nav:hover { color: var(--c-accent); border-color: var(--c-accent); }
+.lightbox-close { top: 1rem; right: 1.2rem; font-size: 1.6rem; }
+.lightbox-nav { top: 50%; transform: translateY(-50%); }
+.lightbox-prev { left: clamp(0.5rem, 2.5vw, 2.5rem); }
+.lightbox-next { right: clamp(0.5rem, 2.5vw, 2.5rem); }
+.lightbox-nav[hidden] { display: none; }
+
+/* полоска миниатюр — сразу видно, сколько ракурсов внутри */
+.lightbox-thumbs { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.lightbox-thumb {
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: 0;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity var(--transition), border-color var(--transition);
+}
+.lightbox-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.lightbox-thumb:hover { opacity: 0.8; }
+.lightbox-thumb[aria-current='true'] { opacity: 1; border-color: var(--c-accent); }
+.lightbox-figure img { cursor: zoom-in; }
 body.is-locked { overflow: hidden; }
 
 /* ---------- Появление при прокрутке ---------- */
