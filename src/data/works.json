@@ -4,12 +4,12 @@
     "status": "sold",
     "images": [
       {
-        "small": "images/works/lilija-1-800.jpg",
-        "large": "images/works/lilija-1-1600.jpg"
-      },
-      {
         "small": "images/works/lilija-2-800.jpg",
         "large": "images/works/lilija-2-1600.jpg"
+      },
+      {
+        "small": "images/works/lilija-1-800.jpg",
+        "large": "images/works/lilija-1-1600.jpg"
       },
       {
         "small": "images/works/lilija-3-800.jpg",
