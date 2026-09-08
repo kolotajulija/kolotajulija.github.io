@@ -41,16 +41,16 @@
     "status": "sold",
     "images": [
       {
+        "small": "images/works/cepj-1-800.jpg",
+        "large": "images/works/cepj-1-1600.jpg"
+      },
+      {
         "small": "images/works/cepj-5-800.jpg",
         "large": "images/works/cepj-5-1600.jpg"
       },
       {
         "small": "images/works/cepj-4-800.jpg",
         "large": "images/works/cepj-4-1600.jpg"
-      },
-      {
-        "small": "images/works/cepj-1-800.jpg",
-        "large": "images/works/cepj-1-1600.jpg"
       },
       {
         "small": "images/works/cepj-2-800.jpg",
