@@ -273,10 +273,17 @@ h1, h2, h3 {
   cursor: pointer;
   display: grid;
   /* снимок, затем подпись постоянной высоты — карточки заканчиваются на одном уровне */
-  grid-template-rows: auto minmax(3.4rem, auto);
+  grid-template-rows: auto minmax(5rem, auto);
   gap: 0.7rem;
 }
-.work-caption { display: grid; gap: 0.3rem; align-content: start; }
+.work-caption {
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+  /* место под строку коллекции держится и когда её нет */
+  min-height: 5rem;
+}
+.work-collection { min-height: 1em; }
 .work-frame {
   position: relative;
   overflow: hidden;
@@ -321,6 +328,15 @@ h1, h2, h3 {
 }
 .work-count::before { content: '⊞'; margin-right: 0.3rem; opacity: 0.7; }
 
+.work-collection,
+.lightbox-collection {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-text-dim);
+}
+.lightbox-collection { margin: 0; }
+.lightbox-collection[hidden] { display: none; }
 .work-title { font-family: var(--font-display); font-size: var(--step-1); }
 .work-meta { font-size: var(--step--1); color: var(--c-text-dim); letter-spacing: 0.05em; }
 

@@ -11,6 +11,7 @@ type Work = {
   title: Localized
   materials: Localized
   description: Localized
+  collection?: Localized
 }
 type Contact = { key: string; value: string; href: string }
 type Step = { title: string; text: string }
@@ -31,6 +32,7 @@ function localized(value: Localized): string {
 }
 
 export const workTitle = (w: Work) => localized(w.title)
+export const workCollection = (w: Work) => (w.collection ? localized(w.collection) : '')
 export const workMaterials = (w: Work) => localized(w.materials)
 export const workDescription = (w: Work) => localized(w.description)
 export const workStatus = (w: Work) => t(w.status === 'sold' ? 'gallery.sold' : 'gallery.available')
@@ -81,6 +83,14 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
         frame.append(count)
       }
 
+      const caption = document.createElement('span')
+      caption.className = 'work-caption'
+
+      const line = document.createElement('span')
+      line.className = 'work-collection'
+      line.textContent = workCollection(work)
+      caption.append(line)
+
       const title = document.createElement('span')
       title.className = 'work-title'
       title.textContent = workTitle(work)
@@ -89,10 +99,7 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
       meta.className = 'work-meta'
       meta.textContent = workMaterials(work)
 
-      const caption = document.createElement('span')
-      caption.className = 'work-caption'
       caption.append(title, meta)
-
       button.append(frame, caption)
       button.addEventListener('click', () => onOpen(firstSlide))
       return button

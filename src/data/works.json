@@ -91,19 +91,24 @@
       }
     ],
     "title": {
-      "ru": "Роза",
-      "en": "Rose",
-      "lv": "Roze"
+      "ru": "Нежность",
+      "en": "Tenderness",
+      "lv": "Maigums"
     },
     "materials": {
-      "ru": "Серебро",
-      "en": "Silver",
-      "lv": "Sudrabs"
+      "ru": "Серебро 925, подставка — дерево",
+      "en": "Sterling silver, wooden stand",
+      "lv": "925 sudrabs, koka pamatne"
     },
     "description": {
       "ru": "Объект для интерьера. Название, материалы, статус и рассказ пока временные — жду твоих слов.",
       "en": "An object for the home. The title, materials, status and story are temporary for now.",
       "lv": "Objekts interjeram. Nosaukums, materiāli, statuss un stāsts pagaidām ir provizoriski."
+    },
+    "collection": {
+      "ru": "Коллекция «Мой сад»",
+      "en": "My Garden collection",
+      "lv": "Kolekcija «Mans dārzs»"
     }
   }
 ]
