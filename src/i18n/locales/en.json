@@ -3,7 +3,9 @@
     "title": "Julija Kolota — Jewellery Art",
     "description": "Contemporary jewellery art — handcrafted pieces in silver, gold and stone."
   },
-  "brand": { "sub": "jewellery art" },
+  "brand": {
+    "aria": "Jūlija Kolota — to the top"
+  },
   "nav": {
     "gallery": "Gallery",
     "about": "About",
@@ -34,19 +36,43 @@
     "eyebrow": "How it is made",
     "title": "Process & materials",
     "steps": [
-      { "title": "Idea and sketch", "text": "Every piece starts on paper — proportion, weight and the way it will sit on the body." },
-      { "title": "Metal", "text": "Sterling silver and gold, worked by hand: sawing, forging, soldering, filing." },
-      { "title": "Stone", "text": "Stones are chosen one by one and set to suit the character of the metal." },
-      { "title": "Finish", "text": "Polishing, patina and a final check — each piece exists in a single copy." }
+      {
+        "title": "Idea and sketch",
+        "text": "Every piece starts on paper — proportion, weight and the way it will sit on the body."
+      },
+      {
+        "title": "Metal",
+        "text": "Sterling silver and gold, worked by hand: sawing, forging, soldering, filing."
+      },
+      {
+        "title": "Stone",
+        "text": "Stones are chosen one by one and set to suit the character of the metal."
+      },
+      {
+        "title": "Finish",
+        "text": "Polishing, patina and a final check — each piece exists in a single copy."
+      }
     ]
   },
   "testimonials": {
     "eyebrow": "In their words",
     "title": "What people say",
     "items": [
-      { "quote": "Placeholder review. A sentence or two from a client about the piece and about working together.", "author": "Client name", "note": "commissioned ring, 2024" },
-      { "quote": "A second placeholder review — replace with a real one when you have it.", "author": "Client name", "note": "earrings, 2023" },
-      { "quote": "A third one. Three short quotes read better than one long one.", "author": "Client name", "note": "wedding rings, 2023" }
+      {
+        "quote": "Placeholder review. A sentence or two from a client about the piece and about working together.",
+        "author": "Client name",
+        "note": "commissioned ring, 2024"
+      },
+      {
+        "quote": "A second placeholder review — replace with a real one when you have it.",
+        "author": "Client name",
+        "note": "earrings, 2023"
+      },
+      {
+        "quote": "A third one. Three short quotes read better than one long one.",
+        "author": "Client name",
+        "note": "wedding rings, 2023"
+      }
     ]
   },
   "contact": {
@@ -59,5 +85,7 @@
       "location": "Studio"
     }
   },
-  "footer": { "note": "All works are handmade, in one copy." }
+  "footer": {
+    "note": "All works are handmade, in one copy."
+  }
 }

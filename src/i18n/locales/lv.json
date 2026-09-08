@@ -3,7 +3,9 @@
     "title": "Julija Kolota — juveliermāksla",
     "description": "Laikmetīga juveliermāksla — ar rokām darināti darbi sudrabā, zeltā un akmenī."
   },
-  "brand": { "sub": "juveliermāksla" },
+  "brand": {
+    "aria": "Jūlija Kolota — uz augšu"
+  },
   "nav": {
     "gallery": "Galerija",
     "about": "Par autori",
@@ -34,19 +36,43 @@
     "eyebrow": "Kā tas top",
     "title": "Process un materiāli",
     "steps": [
-      { "title": "Ideja un skice", "text": "Katrs darbs sākas uz papīra: proporcijas, svars un tas, kā rota gulsies uz ķermeņa." },
-      { "title": "Metāls", "text": "925 sudrabs un zelts, darināts ar rokām: zāģēšana, kalšana, lodēšana, vīlēšana." },
-      { "title": "Akmens", "text": "Akmeņi tiek izvēlēti pa vienam un ielikti atbilstoši metāla raksturam." },
-      { "title": "Apdare", "text": "Pulēšana, patina un pēdējā pārbaude — katrs darbs pastāv vienā eksemplārā." }
+      {
+        "title": "Ideja un skice",
+        "text": "Katrs darbs sākas uz papīra: proporcijas, svars un tas, kā rota gulsies uz ķermeņa."
+      },
+      {
+        "title": "Metāls",
+        "text": "925 sudrabs un zelts, darināts ar rokām: zāģēšana, kalšana, lodēšana, vīlēšana."
+      },
+      {
+        "title": "Akmens",
+        "text": "Akmeņi tiek izvēlēti pa vienam un ielikti atbilstoši metāla raksturam."
+      },
+      {
+        "title": "Apdare",
+        "text": "Pulēšana, patina un pēdējā pārbaude — katrs darbs pastāv vienā eksemplārā."
+      }
     ]
   },
   "testimonials": {
     "eyebrow": "Atsauksmes",
     "title": "Ko saka klienti",
     "items": [
-      { "quote": "Teksta vietturis. Pāris teikumu no klienta — par pašu darbu un par sadarbību.", "author": "Klienta vārds", "note": "pasūtīts gredzens, 2024" },
-      { "quote": "Otra vietturis atsauksme — aizstāsim ar īstu, kad tāda būs.", "author": "Klienta vārds", "note": "auskari, 2023" },
-      { "quote": "Trešā. Trīs īsas atsauksmes lasās labāk nekā viena gara.", "author": "Klienta vārds", "note": "laulību gredzeni, 2023" }
+      {
+        "quote": "Teksta vietturis. Pāris teikumu no klienta — par pašu darbu un par sadarbību.",
+        "author": "Klienta vārds",
+        "note": "pasūtīts gredzens, 2024"
+      },
+      {
+        "quote": "Otra vietturis atsauksme — aizstāsim ar īstu, kad tāda būs.",
+        "author": "Klienta vārds",
+        "note": "auskari, 2023"
+      },
+      {
+        "quote": "Trešā. Trīs īsas atsauksmes lasās labāk nekā viena gara.",
+        "author": "Klienta vārds",
+        "note": "laulību gredzeni, 2023"
+      }
     ]
   },
   "contact": {
@@ -59,5 +85,7 @@
       "location": "Darbnīca"
     }
   },
-  "footer": { "note": "Visi darbi ir darināti ar rokām, vienā eksemplārā." }
+  "footer": {
+    "note": "Visi darbi ir darināti ar rokām, vienā eksemplārā."
+  }
 }
