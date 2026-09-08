@@ -43,7 +43,7 @@ a { color: inherit; text-decoration: none; }
   top: 0;
   z-index: 100;
   background: var(--c-accent);
-  color: #14120c;
+  color: var(--c-on-accent);
   padding: 0.6rem 1rem;
 }
 .skip-link:focus { left: 1rem; top: 1rem; }
@@ -200,7 +200,7 @@ h1, h2, h3 {
   transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 .btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--c-accent); color: #14120c; }
+.btn-primary { background: var(--c-accent); color: var(--c-on-accent); }
 .btn-ghost { color: var(--c-text); border-color: var(--c-line); }
 .btn-ghost:hover { border-color: var(--c-accent); color: var(--c-accent); }
 

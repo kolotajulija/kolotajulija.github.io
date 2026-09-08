@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1000" width="750" height="1000" role="img">
-  <rect width="750" height="1000" fill="#1d1c19" />
-  <g fill="none" stroke="#5f5a51" stroke-width="3">
+  <rect width="750" height="1000" fill="#1E2126" />
+  <g fill="none" stroke="#6E767C" stroke-width="3">
     <circle cx="375" cy="400" r="130" />
     <path d="M180 860 q0-215 195-215 t195 215" />
   </g>
-  <text x="375" y="940" text-anchor="middle" fill="#6f6a60" font-family="Georgia, serif" font-size="28" letter-spacing="6">portrait</text>
+  <text x="375" y="940" text-anchor="middle" fill="#6E767C" font-family="Georgia, serif" font-size="28" letter-spacing="6">portrait</text>
 </svg>
