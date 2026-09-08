@@ -146,8 +146,8 @@ h1, h2, h3 {
 .lang-current {
   display: grid;
   place-items: center;
-  min-width: 2.9rem;
-  height: 2.9rem;
+  min-width: var(--control-size);
+  height: var(--control-size);
   padding: 0 0.5rem;
   background: none;
   border: var(--border-thin);
@@ -195,7 +195,8 @@ h1, h2, h3 {
 .theme-toggle, .nav-toggle {
   display: grid;
   place-items: center;
-  width: 2.5rem; height: 2.5rem;
+  width: var(--control-size);
+  height: var(--control-size);
   background: none;
   border: var(--border-thin);
   border-radius: var(--radius);
@@ -530,7 +531,7 @@ body.is-locked { overflow: hidden; }
   .brand-mark { height: 2.1rem; }
   .header-actions { gap: 0.1rem; }
   .lang-btn { padding: 0.3rem 0.22rem; font-size: 0.62rem; letter-spacing: 0.1em; }
-  .theme-toggle, .nav-toggle { width: 2.15rem; height: 2.15rem; }
+  .header-inner { --control-size: 2.25rem; }
 }
 
 @media (max-width: 860px) {
