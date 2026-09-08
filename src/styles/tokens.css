@@ -27,30 +27,30 @@
   --transition: 280ms cubic-bezier(0.22, 0.61, 0.36, 1);
 
   /* Тёмная тема — базовая. Цвета взяты из логотипа: оникс, серебро, костяной. */
-  --c-bg: #15171A;
-  --c-bg-alt: #1A1D21;
-  --c-surface: #21252A;
+  --c-bg: #101419;
+  --c-bg-alt: #161C23;
+  --c-surface: #1D242C;
   --c-text: #EDEBE6;
   --c-text-dim: #8E979E;
-  --c-line: #2B3036;
+  --c-line: #29323B;
   --c-accent: #EDEBE6;
   --c-on-accent: #15171A;
   --c-accent-soft: rgba(199, 204, 208, 0.1);
-  --c-overlay: rgba(12, 13, 15, 0.94);
+  --c-overlay: rgba(9, 12, 16, 0.94);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
 }
 
 /* Светлая тема */
 :root[data-theme='light'] {
-  --c-bg: #F6F5F2;
-  --c-bg-alt: #EDEBE6;
-  --c-surface: #FFFFFF;
+  --c-bg: #F1EDE4;
+  --c-bg-alt: #E6E0D2;
+  --c-surface: #FBF9F4;
   --c-text: #15171A;
   --c-text-dim: #565D63;
-  --c-line: #DAD7D0;
+  --c-line: #D4CCBC;
   --c-accent: #15171A;
   --c-on-accent: #F6F5F2;
   --c-accent-soft: rgba(65, 72, 78, 0.07);
-  --c-overlay: rgba(246, 245, 242, 0.96);
+  --c-overlay: rgba(241, 237, 228, 0.96);
   --shadow: 0 24px 60px rgba(21, 23, 26, 0.12);
 }
