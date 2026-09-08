@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title": "Julija Kolota — Jewellery Art",
+    "description": "Contemporary jewellery art — handcrafted pieces in silver, gold and stone."
+  },
+  "brand": { "sub": "jewellery art" },
+  "nav": {
+    "gallery": "Gallery",
+    "about": "About",
+    "process": "Process",
+    "contact": "Contact",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": "Contemporary jewellery",
+    "title": "Metal that remembers the hand",
+    "lead": "One-of-a-kind pieces, shaped slowly in silver, gold and stone.",
+    "cta": "See the work",
+    "cta2": "Get in touch"
+  },
+  "gallery": {
+    "eyebrow": "Selected works",
+    "title": "Gallery",
+    "open": "Open image"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About the maker",
+    "portraitAlt": "Portrait of Julija Kolota",
+    "body": "<p>Placeholder text. A few sentences about your background, your training and what drew you to jewellery.</p><p>A second paragraph about your approach: what you look for in a piece, and what a client can expect when they commission one.</p>"
+  },
+  "process": {
+    "eyebrow": "How it is made",
+    "title": "Process & materials",
+    "steps": [
+      { "title": "Idea and sketch", "text": "Every piece starts on paper — proportion, weight and the way it will sit on the body." },
+      { "title": "Metal", "text": "Sterling silver and gold, worked by hand: sawing, forging, soldering, filing." },
+      { "title": "Stone", "text": "Stones are chosen one by one and set to suit the character of the metal." },
+      { "title": "Finish", "text": "Polishing, patina and a final check — each piece exists in a single copy." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Contact",
+    "lead": "For commissions, exhibitions and questions.",
+    "labels": {
+      "email": "Email",
+      "instagram": "Instagram",
+      "location": "Studio"
+    }
+  },
+  "footer": { "note": "All works are handmade, in one copy." }
+}

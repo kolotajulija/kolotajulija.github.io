@@ -1,0 +1,44 @@
+[
+  {
+    "id": "w1",
+    "image": "images/works/w1.svg",
+    "year": "2024",
+    "title": { "en": "Ripple ring", "ru": "Кольцо «Рябь»", "lv": "Gredzens «Viļņi»" },
+    "materials": { "en": "Sterling silver", "ru": "Серебро 925", "lv": "925 sudrabs" }
+  },
+  {
+    "id": "w2",
+    "image": "images/works/w2.svg",
+    "year": "2024",
+    "title": { "en": "Ash pendant", "ru": "Кулон «Пепел»", "lv": "Kulons «Pelni»" },
+    "materials": { "en": "Silver, obsidian", "ru": "Серебро, обсидиан", "lv": "Sudrabs, obsidiāns" }
+  },
+  {
+    "id": "w3",
+    "image": "images/works/w3.svg",
+    "year": "2023",
+    "title": { "en": "Amber line earrings", "ru": "Серьги «Янтарная линия»", "lv": "Auskari «Dzintara līnija»" },
+    "materials": { "en": "Gold, amber", "ru": "Золото, янтарь", "lv": "Zelts, dzintars" }
+  },
+  {
+    "id": "w4",
+    "image": "images/works/w4.svg",
+    "year": "2023",
+    "title": { "en": "Bark brooch", "ru": "Брошь «Кора»", "lv": "Brošas «Miza»" },
+    "materials": { "en": "Oxidised silver", "ru": "Оксидированное серебро", "lv": "Oksidēts sudrabs" }
+  },
+  {
+    "id": "w5",
+    "image": "images/works/w5.svg",
+    "year": "2022",
+    "title": { "en": "Tide bracelet", "ru": "Браслет «Прилив»", "lv": "Aproce «Paisums»" },
+    "materials": { "en": "Silver, pearl", "ru": "Серебро, жемчуг", "lv": "Sudrabs, pērle" }
+  },
+  {
+    "id": "w6",
+    "image": "images/works/w6.svg",
+    "year": "2022",
+    "title": { "en": "Signet No. 4", "ru": "Печатка № 4", "lv": "Zīmoggredzens Nr. 4" },
+    "materials": { "en": "Yellow gold", "ru": "Жёлтое золото", "lv": "Dzeltenais zelts" }
+  }
+]

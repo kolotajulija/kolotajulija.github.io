@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julija Kolota — Jewellery Art</title>
+    <meta name="description" data-i18n="meta.description" content="Contemporary jewellery art — handcrafted pieces in silver, gold and stone." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#gallery" data-i18n="nav.skip">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top">
+          <span class="brand-name">Julija Kolota</span>
+          <span class="brand-sub" data-i18n="brand.sub">jewellery art</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#process" data-i18n="nav.process">Process</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-switch" id="lang-switch" role="group" aria-label="Language"></div>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.2" />
+              <g stroke-linecap="round">
+                <path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9" />
+              </g>
+            </svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z" />
+            </svg>
+          </button>
+          <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="hero">
+        <div class="container hero-inner">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Contemporary jewellery</p>
+          <h1 class="hero-title" data-i18n="hero.title">Metal that remembers the hand</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            One-of-a-kind pieces, shaped slowly in silver, gold and stone.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#gallery" data-i18n="hero.cta">See the work</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"></div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="gallery.eyebrow">Selected works</p>
+            <h2 class="section-title" data-i18n="gallery.title">Gallery</h2>
+          </header>
+          <div class="gallery-grid" id="gallery-grid"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="about">
+        <div class="container about-grid">
+          <div class="about-media">
+            <img id="about-portrait" src="/images/portrait.svg" alt="" data-i18n-alt="about.portraitAlt" />
+          </div>
+          <div class="about-text">
+            <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+            <h2 class="section-title" data-i18n="about.title">About the maker</h2>
+            <div data-i18n-html="about.body">
+              <p>A short paragraph about who you are and how you came to jewellery.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="process.eyebrow">How it is made</p>
+            <h2 class="section-title" data-i18n="process.title">Process &amp; materials</h2>
+          </header>
+          <ol class="process-list" id="process-list"></ol>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contact">
+        <div class="container contact-inner">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
+            <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+            <p class="section-lead" data-i18n="contact.lead">
+              For commissions, exhibitions and questions.
+            </p>
+          </header>
+          <ul class="contact-list" id="contact-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Julija Kolota</p>
+        <p data-i18n="footer.note">All works are handmade, in one copy.</p>
+      </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous">&#8249;</button>
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" src="" alt="" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next">&#8250;</button>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
