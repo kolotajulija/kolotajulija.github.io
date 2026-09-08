@@ -94,8 +94,9 @@ export function createLightbox(): (index: number) => void {
   next.addEventListener('click', () => show(index + 1))
   image.addEventListener('click', () => show(index + 1))
 
-  root.addEventListener('click', (e) => {
-    if (e.target === root) close()
+  const scroll = document.getElementById('lightbox-scroll')!
+  scroll.addEventListener('click', (e) => {
+    if (e.target === scroll) close()
   })
 
   document.addEventListener('keydown', (e) => {

@@ -346,15 +346,22 @@ h1, h2, h3 {
   inset: 0;
   z-index: 90;
   display: none;
+  background: var(--c-overlay);
+  backdrop-filter: blur(6px);
+}
+.lightbox.is-open { display: block; }
+
+/* прокручивается только этот слой — кнопки лежат выше и остаются на месте */
+.lightbox-scroll {
+  position: absolute;
+  inset: 0;
+  display: flex;
   align-items: flex-start;
   justify-content: center;
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: clamp(1rem, 5vw, 3.5rem);
-  background: var(--c-overlay);
-  backdrop-filter: blur(6px);
 }
-.lightbox.is-open { display: flex; }
 .lightbox-figure {
   margin: auto;
   display: grid;
@@ -379,7 +386,10 @@ h1, h2, h3 {
 }
 .lightbox-description { margin: 0; color: var(--c-text-dim); line-height: 1.65; }
 .lightbox-close, .lightbox-nav {
+  /* привязка к экрану, а не к содержимому: при прокрутке к описанию
+     кнопки остаются на месте */
   position: absolute;
+  z-index: 2;
   display: grid;
   place-items: center;
   width: 2.9rem;
