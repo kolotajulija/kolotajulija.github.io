@@ -35,5 +35,38 @@
       "en": "Sometimes you long to make the flowering last — so I tried to do it in silver. The lily has always stood for purity and rebirth: Christian tradition tied it to the Virgin Mary, heraldry to nobility, and its flowering in spring was read as a sign of a new beginning. That is the thought I wanted to express — the eternal flowering of a woman’s soul. This lily will not fade.",
       "lv": "Reizēm tā gribas pagarināt ziedēšanu — un es to mēģināju izdarīt sudrabā. Lilija jau sen nozīmē šķīstību un atdzimšanu: kristīgā tradīcija to saistīja ar Jaunavu Mariju, heraldika — ar cēlumu, bet pavasara ziedēšanu lasīja kā jauna sākuma zīmi. Tieši šo domu man gribējās izteikt — sievietes dvēseles mūžīgo ziedēšanu. Šī lilija vairs nenovītīs."
     }
+  },
+  {
+    "id": "cepj",
+    "status": "available",
+    "images": [
+      {
+        "small": "images/works/cepj-1-800.jpg",
+        "large": "images/works/cepj-1-1600.jpg"
+      },
+      {
+        "small": "images/works/cepj-2-800.jpg",
+        "large": "images/works/cepj-2-1600.jpg"
+      },
+      {
+        "small": "images/works/cepj-3-800.jpg",
+        "large": "images/works/cepj-3-1600.jpg"
+      }
+    ],
+    "title": {
+      "ru": "Цепь",
+      "en": "Chain",
+      "lv": "Ķēde"
+    },
+    "materials": {
+      "ru": "Серебро",
+      "en": "Silver",
+      "lv": "Sudrabs"
+    },
+    "description": {
+      "ru": "Здесь будет твой рассказ об этой работе. Название, материалы и статус тоже пока временные.",
+      "en": "Your own story about this piece will live here. The title, materials and status are temporary too.",
+      "lv": "Šeit būs tavs stāsts par šo darbu. Nosaukums, materiāli un statuss pagaidām arī ir provizoriski."
+    }
   }
 ]
