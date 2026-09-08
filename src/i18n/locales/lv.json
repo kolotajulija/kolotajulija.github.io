@@ -29,7 +29,8 @@
     "title": "Galerija",
     "open": "Atvērt darbu",
     "available": "Pieejams",
-    "sold": "Pārdots"
+    "sold": "Pārdots",
+    "order": "Pēc pasūtījuma"
   },
   "about": {
     "eyebrow": "Iepazīšanās",

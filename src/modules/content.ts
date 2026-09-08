@@ -6,7 +6,8 @@ type Localized = Partial<Record<LangCode, string>>
 type WorkImage = { small: string; large: string }
 type Work = {
   id: string
-  status: 'available' | 'sold'
+  status: 'available' | 'sold' | 'order'
+  lead?: Localized
   images: WorkImage[]
   title: Localized
   materials: Localized
@@ -35,7 +36,8 @@ export const workTitle = (w: Work) => localized(w.title)
 export const workCollection = (w: Work) => (w.collection ? localized(w.collection) : '')
 export const workMaterials = (w: Work) => localized(w.materials)
 export const workDescription = (w: Work) => localized(w.description)
-export const workStatus = (w: Work) => t(w.status === 'sold' ? 'gallery.sold' : 'gallery.available')
+export const workStatus = (w: Work) => t(`gallery.${w.status}`)
+export const workLead = (w: Work) => (w.lead ? localized(w.lead) : '')
 
 /** Все снимки всех работ одной лентой — по ней и ходят стрелки лайтбокса. */
 export function getSlides(): Slide[] {

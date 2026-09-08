@@ -83,7 +83,7 @@
   },
   {
     "id": "roze",
-    "status": "available",
+    "status": "order",
     "images": [
       {
         "small": "images/works/roze-1-800.jpg",
@@ -101,14 +101,19 @@
       "lv": "925 sudrabs, koka pamatne"
     },
     "description": {
-      "ru": "Объект для интерьера. Название, материалы, статус и рассказ пока временные — жду твоих слов.",
-      "en": "An object for the home. The title, materials, status and story are temporary for now.",
-      "lv": "Objekts interjeram. Nosaukums, materiāli, statuss un stāsts pagaidām ir provizoriski."
+      "ru": "У каждого человека свои мечты — а значит, и свой сад. И цветы в нём цветут только свои, ничьи больше. Эта роза выросла в моём саду. Каждую следующую я делаю под сад того, кто её заказывает.",
+      "en": "Everyone has their own dreams — and so their own garden. The flowers that bloom there are theirs alone. This rose grew in my garden; every next one I make for the garden of whoever asks for it.",
+      "lv": "Katram cilvēkam ir savi sapņi — un līdz ar to savs dārzs. Un ziedi tajā zied tikai viņa paša. Šī roze uzziedēja manā dārzā; katru nākamo veidoju tam dārzam, kura saimnieks to pasūta."
     },
     "collection": {
       "ru": "Коллекция «Мой сад»",
       "en": "My Garden collection",
       "lv": "Kolekcija «Mans dārzs»"
+    },
+    "lead": {
+      "ru": "срок изготовления — 3 недели",
+      "en": "made in about three weeks",
+      "lv": "izgatavošanas laiks — 3 nedēļas"
     }
   }
 ]

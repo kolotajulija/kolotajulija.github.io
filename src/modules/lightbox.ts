@@ -5,6 +5,7 @@ import {
   workMaterials,
   workStatus,
   workTitle,
+  workLead,
   workCollection,
   type Slide,
 } from './content'
@@ -66,7 +67,7 @@ export function createLightbox(): (index: number) => void {
     collection.textContent = workCollection(work)
     collection.hidden = !workCollection(work)
     title.textContent = workTitle(work)
-    meta.textContent = [workMaterials(work), workStatus(work), total > 1 ? `${position} / ${total}` : '']
+    meta.textContent = [workMaterials(work), workStatus(work), workLead(work), total > 1 ? `${position} / ${total}` : '']
       .filter(Boolean)
       .join(' · ')
     description.textContent = workDescription(work)

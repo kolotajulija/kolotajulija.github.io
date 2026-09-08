@@ -310,6 +310,7 @@ h1, h2, h3 {
   border: var(--border-thin);
 }
 .work-status-sold { color: var(--c-text-dim); }
+.work-status-order { color: var(--c-text); }
 
 /* сколько ещё ракурсов ждёт внутри */
 .work-count {

@@ -29,7 +29,8 @@
     "title": "Gallery",
     "open": "Open the piece",
     "available": "Available",
-    "sold": "Sold"
+    "sold": "Sold",
+    "order": "Made to order"
   },
   "about": {
     "eyebrow": "Get to know me",
