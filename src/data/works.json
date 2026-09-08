@@ -80,5 +80,30 @@
       "en": "This chain cannot be broken — every link is soldered shut, not one of them opens. It is strong and dependable, and time has no hold on it. That is how I wanted to convey the force of nature itself: its permanence and its refusal to be broken.",
       "lv": "Šo ķēdi nav iespējams pārraut — visi posmi ir salodēti, neviens no tiem neveras vaļā. Tā ir izturīga un droša, un laikam pār to nav varas. Tā es gribēju nodot pašas dabas spēku: tās mūžību un nesalaužamību."
     }
+  },
+  {
+    "id": "roze",
+    "status": "available",
+    "images": [
+      {
+        "small": "images/works/roze-1-800.jpg",
+        "large": "images/works/roze-1-1600.jpg"
+      }
+    ],
+    "title": {
+      "ru": "Роза",
+      "en": "Rose",
+      "lv": "Roze"
+    },
+    "materials": {
+      "ru": "Серебро",
+      "en": "Silver",
+      "lv": "Sudrabs"
+    },
+    "description": {
+      "ru": "Объект для интерьера. Название, материалы, статус и рассказ пока временные — жду твоих слов.",
+      "en": "An object for the home. The title, materials, status and story are temporary for now.",
+      "lv": "Objekts interjeram. Nosaukums, materiāli, statuss un stāsts pagaidām ir provizoriski."
+    }
   }
 ]
