@@ -273,7 +273,7 @@ h1, h2, h3 {
   cursor: pointer;
   display: grid;
   /* снимок, затем подпись постоянной высоты — карточки заканчиваются на одном уровне */
-  grid-template-rows: auto minmax(5rem, auto);
+  grid-template-rows: auto minmax(3.6rem, auto);
   gap: 0.7rem;
 }
 .work-caption {
@@ -281,9 +281,8 @@ h1, h2, h3 {
   gap: 0.3rem;
   align-content: start;
   /* место под строку коллекции держится и когда её нет */
-  min-height: 5rem;
+  min-height: 3.6rem;
 }
-.work-collection { min-height: 1em; }
 .work-frame {
   position: relative;
   overflow: hidden;
@@ -434,18 +433,24 @@ h1, h2, h3 {
 .lightbox-figure {
   margin: auto;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  grid-template-areas:
-    'thumbs image'
-    'caption caption';
   gap: var(--space-s);
   justify-items: center;
   width: min(100%, 60rem);
 }
+/* снимок и миниатюры живут в своей строке: подпись больше не растягивает
+   колонку и не отодвигает миниатюры от фотографии */
+.lightbox-stage {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 100%;
+}
 .lightbox-figure img {
-  grid-area: image;
-  width: 100%;
+  /* высота одна для всех кадров, ширина по самой фотографии,
+     чтобы миниатюры стояли вплотную к снимку, а не к пустой рамке */
   height: clamp(15rem, 52vh, 34rem);
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
   box-shadow: none;
 }
@@ -498,7 +503,6 @@ h1, h2, h3 {
 /* полоска миниатюр — сразу видно, сколько ракурсов внутри */
 /* дополнительные кадры стоят колонкой справа от снимка */
 .lightbox-thumbs {
-  grid-area: thumbs;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -529,13 +533,7 @@ body.is-locked { overflow: hidden; }
 /* ---------- Мобильные ---------- */
 /* на узких экранах колонка справа съела бы снимок — там миниатюры снизу */
 @media (max-width: 640px) {
-  .lightbox-figure {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      'image'
-      'thumbs'
-      'caption';
-  }
+  .lightbox-stage { flex-direction: column-reverse; }
   .lightbox-thumbs {
     flex-direction: row;
     flex-wrap: wrap;

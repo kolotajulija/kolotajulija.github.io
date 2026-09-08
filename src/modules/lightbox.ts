@@ -6,7 +6,6 @@ import {
   workStatus,
   workTitle,
   workLead,
-  workCollection,
   type Slide,
 } from './content'
 
@@ -63,9 +62,6 @@ export function createLightbox(): (index: number) => void {
 
     image.src = asset(picture.large)
     image.alt = workTitle(work)
-    const collection = document.getElementById('lightbox-collection')!
-    collection.textContent = workCollection(work)
-    collection.hidden = !workCollection(work)
     title.textContent = workTitle(work)
     meta.textContent = [workMaterials(work), workStatus(work), workLead(work), total > 1 ? `${position} / ${total}` : '']
       .filter(Boolean)

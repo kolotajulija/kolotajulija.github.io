@@ -160,10 +160,12 @@
       <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous"><svg class="icon-ui" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5 8 12l6.5 7" /></svg></button>
       <div class="lightbox-scroll" id="lightbox-scroll">
         <figure class="lightbox-figure">
-        <img id="lightbox-image" alt="" />
-        <div class="lightbox-thumbs" id="lightbox-thumbs"></div>
+        <div class="lightbox-stage">
+            <div class="lightbox-thumbs" id="lightbox-thumbs"></div>
+            <img id="lightbox-image" alt="" />
+          </div>
+        
         <figcaption class="lightbox-caption">
-          <p class="lightbox-collection" id="lightbox-collection" hidden></p>
           <h3 class="lightbox-title" id="lightbox-title"></h3>
           <p class="lightbox-meta" id="lightbox-meta"></p>
           <p class="lightbox-description" id="lightbox-description"></p>

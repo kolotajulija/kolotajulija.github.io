@@ -88,11 +88,6 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
       const caption = document.createElement('span')
       caption.className = 'work-caption'
 
-      const line = document.createElement('span')
-      line.className = 'work-collection'
-      line.textContent = workCollection(work)
-      caption.append(line)
-
       const title = document.createElement('span')
       title.className = 'work-title'
       title.textContent = workTitle(work)
