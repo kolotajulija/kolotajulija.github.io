@@ -88,6 +88,22 @@
       {
         "small": "images/works/roze-1-800.jpg",
         "large": "images/works/roze-1-1600.jpg"
+      },
+      {
+        "small": "images/works/roze-2-800.jpg",
+        "large": "images/works/roze-2-1600.jpg"
+      },
+      {
+        "small": "images/works/roze-3-800.jpg",
+        "large": "images/works/roze-3-1600.jpg"
+      },
+      {
+        "small": "images/works/roze-4-800.jpg",
+        "large": "images/works/roze-4-1600.jpg"
+      },
+      {
+        "small": "images/works/roze-5-800.jpg",
+        "large": "images/works/roze-5-1600.jpg"
       }
     ],
     "title": {
