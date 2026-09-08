@@ -527,6 +527,7 @@ body.is-locked { overflow: hidden; }
 }
 
 @media (max-width: 480px) {
+  .brand-mark { height: 2.1rem; }
   .header-actions { gap: 0.1rem; }
   .lang-btn { padding: 0.3rem 0.22rem; font-size: 0.62rem; letter-spacing: 0.1em; }
   .theme-toggle, .nav-toggle { width: 2.15rem; height: 2.15rem; }
