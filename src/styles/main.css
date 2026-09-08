@@ -95,9 +95,9 @@ h1, h2, h3 {
 
 .brand { display: flex; align-items: center; gap: 0.75rem; margin-right: auto; color: var(--c-text); }
 .brand-mark { display: block; width: auto; height: 2.4rem; flex: none; }
-/* логотип нарисован тёмным; в тёмной теме выворачиваем его в светлый */
-:root[data-theme='dark'] .brand-mark,
-:root[data-theme='dark'] .footer-logo { filter: invert(1); }
+/* два готовых файла логотипа вместо выворотки фильтром */
+:root[data-theme='dark'] .logo-on-light,
+:root[data-theme='light'] .logo-on-dark { display: none; }
 .brand-text { display: grid; }
 .brand-name {
   font-family: var(--font-display);
