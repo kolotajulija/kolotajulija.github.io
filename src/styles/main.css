@@ -171,6 +171,8 @@ h1, h2, h3 {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+/* авторский display перебивает браузерное правило для [hidden] — возвращаем его */
+.lang-menu[hidden] { display: none; }
 .lang-btn {
   width: 100%;
   background: none;
