@@ -433,7 +433,8 @@ h1, h2, h3 {
 .lightbox-figure {
   margin: auto;
   display: grid;
-  gap: var(--space-s);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.8rem;
   justify-items: center;
   width: min(100%, 60rem);
 }
@@ -448,13 +449,13 @@ h1, h2, h3 {
 .lightbox-figure img {
   /* высота одна для всех кадров, ширина по самой фотографии,
      чтобы миниатюры стояли вплотную к снимку, а не к пустой рамке */
-  height: clamp(15rem, 52vh, 34rem);
+  height: clamp(12rem, 40vh, 28rem);
   width: auto;
   max-width: 100%;
   object-fit: contain;
   box-shadow: none;
 }
-.lightbox-caption { grid-area: caption; display: grid; gap: 0.45rem; max-width: 52ch; text-align: center; }
+.lightbox-caption { display: grid; gap: 0.4rem; width: min(100%, 62ch); text-align: center; }
 .lightbox-title { font-size: var(--step-2); }
 .lightbox-meta {
   margin: 0;
@@ -506,7 +507,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-height: clamp(15rem, 52vh, 34rem);
+  max-height: clamp(12rem, 40vh, 28rem);
   overflow-y: auto;
   overscroll-behavior: contain;
 }
@@ -533,13 +534,13 @@ body.is-locked { overflow: hidden; }
 /* ---------- Мобильные ---------- */
 /* на узких экранах колонка справа съела бы снимок — там миниатюры снизу */
 @media (max-width: 640px) {
-  .lightbox-stage { flex-direction: column-reverse; }
-  .lightbox-thumbs {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-height: none;
-  }
+  /* снимок ужимается по высоте, чтобы работа с подписью помещалась на один экран */
+  .lightbox-figure img { height: clamp(9rem, 32vh, 20rem); }
+  .lightbox-thumb { width: 2.4rem; height: 2.4rem; }
+  .lightbox-thumbs { max-height: clamp(9rem, 32vh, 20rem); }
+  .lightbox-title { font-size: var(--step-1); }
+  .lightbox-description { font-size: var(--step--1); line-height: 1.55; }
+  .lightbox-scroll { padding: 3.6rem 1rem 1rem; }
 }
 
 @media (max-width: 480px) {
