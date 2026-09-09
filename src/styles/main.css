@@ -446,7 +446,7 @@ h1, h2, h3 {
   gap: 1.1rem;
   max-width: 100%;
 }
-.lightbox-figure img {
+#lightbox-image {
   /* высота одна для всех кадров, ширина по самой фотографии,
      чтобы миниатюры стояли вплотную к снимку, а не к пустой рамке */
   height: clamp(12rem, 44vh, 30rem);
@@ -528,7 +528,7 @@ h1, h2, h3 {
 .lightbox-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .lightbox-thumb:hover { opacity: 0.8; }
 .lightbox-thumb[aria-current='true'] { opacity: 1; border-color: var(--c-accent); }
-.lightbox-figure img { cursor: zoom-in; }
+#lightbox-image { cursor: zoom-in; }
 body.is-locked { overflow: hidden; }
 
 /* ---------- Появление при прокрутке ---------- */
@@ -540,7 +540,7 @@ body.is-locked { overflow: hidden; }
 /* низкие экраны: снимок и текст ужимаются, чтобы работа всё равно
    помещалась целиком без прокрутки */
 @media (max-height: 640px) {
-  .lightbox-figure img { height: clamp(8rem, 28vh, 15rem); }
+  #lightbox-image { height: clamp(8rem, 28vh, 15rem); }
   .lightbox-description { font-size: 0.76rem; line-height: 1.45; }
   .lightbox-title { font-size: var(--step-1); }
   .lightbox-thumb { height: 2.6rem; width: 2.6rem; }
@@ -549,7 +549,7 @@ body.is-locked { overflow: hidden; }
 
 @media (max-width: 640px) {
   /* на телефоне миниатюры уходят под снимок строкой */
-  .lightbox-figure img { height: clamp(11rem, 39vh, 25rem); }
+  #lightbox-image { height: clamp(11rem, 39vh, 25rem); }
   .lightbox-stage {
     flex-direction: column-reverse;
     align-items: center;
