@@ -449,13 +449,13 @@ h1, h2, h3 {
 .lightbox-figure img {
   /* высота одна для всех кадров, ширина по самой фотографии,
      чтобы миниатюры стояли вплотную к снимку, а не к пустой рамке */
-  height: clamp(12rem, 40vh, 28rem);
+  height: clamp(12rem, 44vh, 30rem);
   width: auto;
   max-width: 100%;
   object-fit: contain;
   box-shadow: none;
 }
-.lightbox-caption { display: grid; gap: 0.4rem; width: min(100%, 62ch); text-align: center; }
+.lightbox-caption { display: grid; gap: 0.4rem; width: min(100%, 62ch); text-align: left; }
 .lightbox-title { font-size: var(--step-2); }
 .lightbox-meta {
   margin: 0;
@@ -509,7 +509,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  height: clamp(12rem, 40vh, 28rem);
+  height: clamp(12rem, 44vh, 30rem);
 }
 .lightbox-thumb {
   flex: none;
@@ -537,9 +537,19 @@ body.is-locked { overflow: hidden; }
 
 /* ---------- Мобильные ---------- */
 /* на узких экранах колонка справа съела бы снимок — там миниатюры снизу */
+/* низкие экраны: снимок и текст ужимаются, чтобы работа всё равно
+   помещалась целиком без прокрутки */
+@media (max-height: 640px) {
+  .lightbox-figure img { height: clamp(8rem, 28vh, 15rem); }
+  .lightbox-description { font-size: 0.76rem; line-height: 1.45; }
+  .lightbox-title { font-size: var(--step-1); }
+  .lightbox-thumb { height: 2.6rem; width: 2.6rem; }
+  .lightbox-figure { gap: 0.55rem; }
+}
+
 @media (max-width: 640px) {
   /* на телефоне миниатюры уходят под снимок строкой */
-  .lightbox-figure img { height: clamp(9rem, 30vh, 20rem); }
+  .lightbox-figure img { height: clamp(11rem, 39vh, 25rem); }
   .lightbox-stage {
     flex-direction: column-reverse;
     align-items: center;
@@ -547,6 +557,7 @@ body.is-locked { overflow: hidden; }
   }
   .lightbox-thumbs {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     height: auto;
     width: 100%;
@@ -557,7 +568,7 @@ body.is-locked { overflow: hidden; }
   }
   .lightbox-title { font-size: var(--step-1); }
   .lightbox-description { font-size: var(--step--1); line-height: 1.55; }
-  .lightbox-scroll { padding: 3.6rem 1rem 1rem; }
+  .lightbox-scroll { padding: 3.2rem 0.9rem 0.9rem; }
 }
 
 @media (max-width: 480px) {
