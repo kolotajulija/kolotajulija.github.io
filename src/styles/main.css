@@ -443,7 +443,7 @@ h1, h2, h3 {
 .lightbox-stage {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1.1rem;
   max-width: 100%;
 }
 .lightbox-figure img {
@@ -503,17 +503,21 @@ h1, h2, h3 {
 
 /* полоска миниатюр — сразу видно, сколько ракурсов внутри */
 /* дополнительные кадры стоят колонкой справа от снимка */
+/* колонка ровно по высоте снимка, кадры делят её поровну —
+   поэтому влезают все и колонка никогда не прокручивается */
 .lightbox-thumbs {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-height: clamp(12rem, 40vh, 28rem);
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  height: clamp(12rem, 40vh, 28rem);
 }
 .lightbox-thumb {
-  width: clamp(3.4rem, 5vw, 5.4rem);
-  height: clamp(3.4rem, 5vw, 5.4rem);
+  flex: none;
+  /* высота = высота колонки, поделённая на число кадров, минус зазоры */
+  height: calc((100% - (var(--count, 1) - 1) * 0.5rem) / var(--count, 1));
+  aspect-ratio: 1;
+  width: auto;
+  max-width: 5rem;
   padding: 0;
   border: 1px solid transparent;
   background: none;
@@ -536,8 +540,8 @@ body.is-locked { overflow: hidden; }
 @media (max-width: 640px) {
   /* снимок ужимается по высоте, чтобы работа с подписью помещалась на один экран */
   .lightbox-figure img { height: clamp(9rem, 32vh, 20rem); }
-  .lightbox-thumb { width: 2.4rem; height: 2.4rem; }
-  .lightbox-thumbs { max-height: clamp(9rem, 32vh, 20rem); }
+  .lightbox-thumbs { height: clamp(9rem, 32vh, 20rem); }
+  .lightbox-stage { gap: 0.85rem; }
   .lightbox-title { font-size: var(--step-1); }
   .lightbox-description { font-size: var(--step--1); line-height: 1.55; }
   .lightbox-scroll { padding: 3.6rem 1rem 1rem; }

@@ -39,6 +39,7 @@ export function createLightbox(): (index: number) => void {
       thumbs.replaceChildren()
       return
     }
+    thumbs.style.setProperty('--count', String(siblings.length))
     thumbs.replaceChildren(
       ...siblings.map((slideIndex) => {
         const button = document.createElement('button')
