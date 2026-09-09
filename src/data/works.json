@@ -4,12 +4,12 @@
     "status": "sold",
     "images": [
       {
-        "small": "images/works/lilija-2-800.jpg",
-        "large": "images/works/lilija-2-1600.jpg"
-      },
-      {
         "small": "images/works/lilija-1-800.jpg",
         "large": "images/works/lilija-1-1600.jpg"
+      },
+      {
+        "small": "images/works/lilija-2-800.jpg",
+        "large": "images/works/lilija-2-1600.jpg"
       },
       {
         "small": "images/works/lilija-3-800.jpg",
@@ -45,14 +45,6 @@
         "large": "images/works/cepj-1-1600.jpg"
       },
       {
-        "small": "images/works/cepj-5-800.jpg",
-        "large": "images/works/cepj-5-1600.jpg"
-      },
-      {
-        "small": "images/works/cepj-4-800.jpg",
-        "large": "images/works/cepj-4-1600.jpg"
-      },
-      {
         "small": "images/works/cepj-2-800.jpg",
         "large": "images/works/cepj-2-1600.jpg"
       },
@@ -61,8 +53,8 @@
         "large": "images/works/cepj-3-1600.jpg"
       },
       {
-        "small": "images/works/cepj-6-800.jpg",
-        "large": "images/works/cepj-6-1600.jpg"
+        "small": "images/works/cepj-4-800.jpg",
+        "large": "images/works/cepj-4-1600.jpg"
       }
     ],
     "title": {

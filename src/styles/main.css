@@ -447,12 +447,13 @@ h1, h2, h3 {
   max-width: 100%;
 }
 #lightbox-image {
-  /* высота одна для всех кадров, ширина по самой фотографии,
-     чтобы миниатюры стояли вплотную к снимку, а не к пустой рамке */
+  /* рамка одна и та же для всех работ: та же пропорция 4:5, что и в ленте.
+     Кадр вписывается обрезкой, поэтому размер снимка везде одинаковый */
   height: clamp(12rem, 44vh, 30rem);
+  aspect-ratio: 4 / 5;
   width: auto;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   box-shadow: none;
 }
 .lightbox-caption { display: grid; gap: 0.4rem; width: min(100%, 62ch); text-align: left; }
