@@ -140,7 +140,7 @@ h1, h2, h3 {
 .nav-list a.is-active::after,
 .nav-list a:hover::after { transform: scaleX(1); }
 
-.header-actions { display: flex; align-items: center; gap: var(--space-xs); }
+.header-actions { display: flex; align-items: center; gap: 0.9rem; }
 
 .lang-switch { position: relative; }
 .lang-current {
@@ -573,7 +573,7 @@ body.is-locked { overflow: hidden; }
 
 @media (max-width: 480px) {
   .brand-mark { height: 2.1rem; }
-  .header-actions { gap: 0.1rem; }
+  .header-actions { gap: 0.6rem; }
   .lang-btn { padding: 0.3rem 0.22rem; font-size: 0.62rem; letter-spacing: 0.1em; }
   .header-inner { --control-size: 2.25rem; }
 }
