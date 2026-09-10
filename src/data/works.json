@@ -195,5 +195,42 @@
       "en": "An elegant bracelet of natural onyx with silver inserts. Onyx has long been worn as a talisman: the stone was believed to protect its owner and bring him success. For centuries it was carved into seals and signet rings — onyx has always been the stone of firm decisions.",
       "lv": "Eleganta aproce no dabīga oniksa ar sudraba ieliktņiem. Oniksu jau sen nēsāja kā aizsargamuletu: tika uzskatīts, ka akmens sargā savu saimnieku un nes viņam veiksmi. Gadsimtiem no tā grieza zīmogus un gredzenus — onikss vienmēr ir bijis stingru lēmumu akmens."
     }
+  },
+  {
+    "id": "auskari",
+    "status": "available",
+    "images": [
+      {
+        "small": "images/works/auskari-1-800.jpg",
+        "large": "images/works/auskari-1-1600.jpg"
+      },
+      {
+        "small": "images/works/auskari-2-800.jpg",
+        "large": "images/works/auskari-2-1600.jpg"
+      },
+      {
+        "small": "images/works/auskari-3-800.jpg",
+        "large": "images/works/auskari-3-1600.jpg"
+      },
+      {
+        "small": "images/works/auskari-4-800.jpg",
+        "large": "images/works/auskari-4-1600.jpg"
+      }
+    ],
+    "title": {
+      "ru": "Серьги-цветы",
+      "en": "Flower studs",
+      "lv": "Ziedu auskari"
+    },
+    "materials": {
+      "ru": "Серебро",
+      "en": "Silver",
+      "lv": "Sudrabs"
+    },
+    "description": {
+      "ru": "Серьги-пусеты: раскрытый цветок, каждый лепесток выкован и выгнут вручную. Название, проба, статус и рассказ пока временные.",
+      "en": "Stud earrings: an open flower, every petal forged and curved by hand. The title, hallmark, status and story are temporary for now.",
+      "lv": "Auskari-pogas: atvēries zieds, katra ziedlapa kalta un izliekta ar rokām. Nosaukums, prove, statuss un stāsts pagaidām ir provizoriski."
+    }
   }
 ]
