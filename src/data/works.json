@@ -158,5 +158,42 @@
       "en": "Another flower from my garden: an open peony, a bud beside it and leaves, all forged in silver. The title, status and story are temporary for now.",
       "lv": "Vēl viens zieds no mana dārza: atvēries peonijas zieds, pumpurs blakus un lapas — viss kalts sudrabā. Nosaukums, statuss un stāsts pagaidām ir provizoriski."
     }
+  },
+  {
+    "id": "aproce",
+    "status": "available",
+    "images": [
+      {
+        "small": "images/works/aproce-1-800.jpg",
+        "large": "images/works/aproce-1-1600.jpg"
+      },
+      {
+        "small": "images/works/aproce-2-800.jpg",
+        "large": "images/works/aproce-2-1600.jpg"
+      },
+      {
+        "small": "images/works/aproce-3-800.jpg",
+        "large": "images/works/aproce-3-1600.jpg"
+      },
+      {
+        "small": "images/works/aproce-4-800.jpg",
+        "large": "images/works/aproce-4-1600.jpg"
+      }
+    ],
+    "title": {
+      "ru": "Браслет",
+      "en": "Bracelet",
+      "lv": "Aproce"
+    },
+    "materials": {
+      "ru": "Чёрный камень, серебро",
+      "en": "Black stone, silver",
+      "lv": "Melns akmens, sudrabs"
+    },
+    "description": {
+      "ru": "Название, камень, статус и рассказ пока временные — жду твоих слов.",
+      "en": "The title, stone, status and story are temporary for now.",
+      "lv": "Nosaukums, akmens, statuss un stāsts pagaidām ir provizoriski."
+    }
   }
 ]
