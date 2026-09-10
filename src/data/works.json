@@ -232,5 +232,47 @@
       "en": "Silver roses — a small flower whose every petal is forged and curved by hand, so no two roses are alike. A striking accent to an evening look: the silver catches the light, and the flower comes alive with every turn of the head.",
       "lv": "Sudraba rozītes — mazs zieds, kura katra ziedlapa ir kalta un izliekta ar rokām, tāpēc neviena roze neatkārto otru. Lielisks vakara tēla akcents: sudrabs ķer gaismu, un zieds atdzīvojas ar katru galvas pagriezienu."
     }
+  },
+  {
+    "id": "kulons",
+    "status": "order",
+    "images": [
+      {
+        "small": "images/works/kulons-1-800.jpg",
+        "large": "images/works/kulons-1-1600.jpg"
+      },
+      {
+        "small": "images/works/kulons-2-800.jpg",
+        "large": "images/works/kulons-2-1600.jpg"
+      },
+      {
+        "small": "images/works/kulons-3-800.jpg",
+        "large": "images/works/kulons-3-1600.jpg"
+      },
+      {
+        "small": "images/works/kulons-4-800.jpg",
+        "large": "images/works/kulons-4-1600.jpg"
+      }
+    ],
+    "title": {
+      "ru": "Мёбиус",
+      "en": "Möbius",
+      "lv": "Mēbiuss"
+    },
+    "materials": {
+      "ru": "Серебро 925, 125 г",
+      "en": "Sterling silver, 125 g",
+      "lv": "925 sudrabs, 125 g"
+    },
+    "lead": {
+      "ru": "работа выполнена на заказ",
+      "en": "made to commission",
+      "lv": "darināts pēc pasūtījuma"
+    },
+    "description": {
+      "ru": "Широкая серебряная лента, перекрученная одним витком, — знак бесконечности, у которого нет ни начала, ни конца. У ленты Мёбиуса всего одна сторона: ведёшь по ней пальцем и возвращаешься туда, откуда начал, ни разу её не перевернув. Крупный и смелый акцент — 125 граммов серебра на кожаном шнуре. Такой кулон запоминают, а вместе с ним и того, кто его носит.",
+      "en": "A wide silver band given a single twist — a sign of infinity with neither beginning nor end. A Möbius strip has only one side: run a finger along it and you return to where you started without ever turning it over. A bold accent — 125 grams of silver on a leather cord. A pendant like this is remembered, and so is the person wearing it.",
+      "lv": "Plata sudraba lente ar vienu pagriezienu — bezgalības zīme, kurai nav ne sākuma, ne gala. Mēbiusa lentei ir tikai viena puse: velc pa to ar pirkstu un atgriezies tur, kur sāki, to ne reizi neapgriežot. Drosmīgs akcents — 125 grami sudraba uz ādas auklas. Tādu kulonu atceras, un līdz ar to arī tā valkātāju."
+    }
   }
 ]
