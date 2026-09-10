@@ -235,7 +235,7 @@
   },
   {
     "id": "kulons",
-    "status": "order",
+    "status": "sold",
     "images": [
       {
         "small": "images/works/kulons-1-800.jpg",
@@ -265,7 +265,7 @@
       "lv": "925 sudrabs, 125 g"
     },
     "lead": {
-      "ru": "работа выполнена на заказ",
+      "ru": "сделан на заказ",
       "en": "made to commission",
       "lv": "darināts pēc pasūtījuma"
     },
