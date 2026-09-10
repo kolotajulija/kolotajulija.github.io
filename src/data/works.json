@@ -181,19 +181,19 @@
       }
     ],
     "title": {
-      "ru": "Браслет",
-      "en": "Bracelet",
-      "lv": "Aproce"
+      "ru": "Мужской браслет из оникса",
+      "en": "Men’s onyx bracelet",
+      "lv": "Vīriešu oniksa aproce"
     },
     "materials": {
-      "ru": "Чёрный камень, серебро",
-      "en": "Black stone, silver",
-      "lv": "Melns akmens, sudrabs"
+      "ru": "Оникс, серебро 925",
+      "en": "Onyx, sterling silver",
+      "lv": "Onikss, 925 sudrabs"
     },
     "description": {
-      "ru": "Название, камень, статус и рассказ пока временные — жду твоих слов.",
-      "en": "The title, stone, status and story are temporary for now.",
-      "lv": "Nosaukums, akmens, statuss un stāsts pagaidām ir provizoriski."
+      "ru": "Элегантный браслет из натурального оникса с серебряными вставками. Оникс издавна носили как оберег: считалось, что камень защищает своего хозяина и приносит ему удачу в делах. Из него веками резали печати и перстни — оникс всегда был камнем твёрдых решений.",
+      "en": "An elegant bracelet of natural onyx with silver inserts. Onyx has long been worn as a talisman: the stone was believed to protect its owner and bring him success. For centuries it was carved into seals and signet rings — onyx has always been the stone of firm decisions.",
+      "lv": "Eleganta aproce no dabīga oniksa ar sudraba ieliktņiem. Oniksu jau sen nēsāja kā aizsargamuletu: tika uzskatīts, ka akmens sargā savu saimnieku un nes viņam veiksmi. Gadsimtiem no tā grieza zīmogus un gredzenus — onikss vienmēr ir bijis stingru lēmumu akmens."
     }
   }
 ]
