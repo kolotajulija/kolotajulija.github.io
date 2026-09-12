@@ -46,6 +46,10 @@ export function onLangChange(fn: (lang: LangCode) => void): void {
 }
 
 function detectLang(): LangCode {
+  // язык из ссылки главнее: человек прислал адрес на своём языке
+  const fromUrl = new URLSearchParams(window.location.search).get('lang')
+  if (fromUrl && supported.includes(fromUrl as LangCode)) return fromUrl as LangCode
+
   let stored: string | null = null
   try {
     stored = localStorage.getItem(LANG_STORAGE_KEY)
@@ -90,6 +94,9 @@ export function setLang(lang: LangCode): void {
     /* игнорируем */
   }
   applyTranslations()
+  const url = new URL(window.location.href)
+  url.searchParams.set('lang', current)
+  window.history.replaceState(null, '', url)
   listeners.forEach((fn) => fn(current))
 }
 

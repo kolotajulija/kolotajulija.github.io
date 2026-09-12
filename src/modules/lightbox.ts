@@ -8,6 +8,7 @@ import {
   workLead,
   type Slide,
 } from './content'
+import { updateUrl } from './url'
 
 /**
  * Полноэкранный просмотр. Листать можно четырьмя способами: стрелками по краям,
@@ -68,6 +69,7 @@ export function createLightbox(): (index: number) => void {
       .filter(Boolean)
       .join(' · ')
     description.textContent = workDescription(work)
+    updateUrl({ work: work.id, photo: String(position) })
 
     const single = slides.length < 2
     prev.hidden = single
@@ -85,6 +87,7 @@ export function createLightbox(): (index: number) => void {
   }
 
   const close = () => {
+    updateUrl({ work: null, photo: null }, '#gallery')
     root.classList.remove('is-open')
     root.setAttribute('aria-hidden', 'true')
     document.body.classList.remove('is-locked')

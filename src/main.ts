@@ -6,6 +6,8 @@ import { initNav } from './modules/nav'
 import { initReveal } from './modules/reveal'
 import { renderContacts, renderGallery, renderProcess, renderTestimonials } from './modules/content'
 import { createLightbox } from './modules/lightbox'
+import { getSlides } from './modules/content'
+import { lockSection, readUrl, updateUrl } from './modules/url'
 
 /** Языки прячутся под одну кнопку: в шапке видно только текущий. */
 let langListeners: AbortController | null = null
@@ -63,6 +65,9 @@ function renderLangSwitch(): void {
 }
 
 function main(): void {
+  // адрес читаем до отрисовки: подсветка разделов вскоре перепишет хеш
+  const wanted = location.hash.length > 1 ? location.hash : ''
+
   initTheme()
   initI18n()
 
@@ -81,6 +86,27 @@ function main(): void {
 
   initNav()
   initReveal()
+
+  // ссылка может указывать на конкретную работу и кадр — открываем их сразу
+  const { work, photo } = readUrl()
+  if (work) {
+    const slides = getSlides()
+    const index = slides.findIndex((s) => s.work.id === work && s.position === (photo ?? 1))
+    if (index >= 0) openLightbox(index)
+  } else if (wanted) {
+    // разделы собираются скриптом, а снимки подгружаются лениво, поэтому
+    // страница дорастает уже после перехода по ссылке: доводим прокрутку,
+    // пока раздел не встанет на место
+    const target = document.querySelector<HTMLElement>(wanted)
+    if (target) {
+      lockSection(1600)
+      const snap = () => target.scrollIntoView({ behavior: 'instant' as ScrollBehavior, block: 'start' })
+      snap()
+      ;[0, 120, 350, 700, 1200, 1500].forEach((ms) => setTimeout(snap, ms))
+      window.addEventListener('load', () => setTimeout(snap, 60), { once: true })
+      setTimeout(() => updateUrl({}, wanted), 1550)
+    }
+  }
 
   document.getElementById('year')!.textContent = String(new Date().getFullYear())
 

@@ -1,3 +1,5 @@
+import { updateSection } from './url'
+
 /** Мобильное меню, подсветка активного раздела, тень у шапки при прокрутке. */
 export function initNav(): void {
   const header = document.getElementById('site-header')!
@@ -41,6 +43,10 @@ export function initNav(): void {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return
         links.forEach((link) => link.classList.toggle('is-active', link.hash === `#${entry.target.id}`))
+        // адрес показывает раздел, на котором человек сейчас находится
+        if (!document.getElementById('lightbox')?.classList.contains('is-open')) {
+          updateSection(entry.target.id)
+        }
       })
     },
     { rootMargin: '-45% 0px -50% 0px' },
