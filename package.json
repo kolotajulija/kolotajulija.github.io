@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "bump": "node scripts/bump-version.mjs",
     "build": "tsc --noEmit && vite build",
+    "release": "node scripts/bump-version.mjs && tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {

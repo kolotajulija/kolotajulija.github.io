@@ -1,16 +1,15 @@
 import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 
-const pkg = JSON.parse(readFileSync('./package.json', 'utf8'))
+const { version } = JSON.parse(readFileSync('./version.json', 'utf8'))
 
 // На GitHub Pages сайт живёт по адресу /<имя-репозитория>/,
 // поэтому base подставляется на CI через переменную окружения BASE_PATH.
 // Локально (npm run dev) остаётся '/'.
 export default defineConfig({
-  // версия и дата сборки подставляются в подвал сайта
+  // версия подставляется в подвал сайта: дата и номер выкладки за этот день
   define: {
-    __APP_VERSION__: JSON.stringify(pkg.version),
-    __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+    __APP_VERSION__: JSON.stringify(version),
   },
   base: process.env.BASE_PATH ?? '/',
   build: {

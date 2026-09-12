@@ -111,10 +111,7 @@ function main(): void {
   document.getElementById('year')!.textContent = String(new Date().getFullYear())
 
   const version = document.getElementById('footer-version')
-  if (version) {
-    const [y, m, d] = __BUILD_DATE__.split('-')
-    version.textContent = `v${__APP_VERSION__} · ${d}.${m}.${y}`
-  }
+  if (version) version.textContent = `v${__APP_VERSION__}`
 }
 
 main()
