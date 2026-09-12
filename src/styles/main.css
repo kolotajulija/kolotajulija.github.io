@@ -431,7 +431,7 @@ h1, h2, h3 {
   padding: clamp(1rem, 5vw, 3.5rem);
 }
 .lightbox-figure {
-  margin: auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 0.8rem;
@@ -471,9 +471,12 @@ h1, h2, h3 {
 }
 
 .lightbox-caption { display: grid; gap: 0.4rem; width: min(100%, 62ch); text-align: left; }
-.lightbox-title { font-size: var(--step-2); }
+.lightbox-title { font-size: var(--step-2); min-height: 2.2em; }
 .lightbox-meta {
   margin: 0;
+  /* место под две строки: у одних работ материалы со сроком не помещаются
+     в строку, и описание ниже съезжало при листании */
+  min-height: 3.4em;
   font-size: var(--step--1);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -575,6 +578,7 @@ body.is-locked { overflow: hidden; }
     flex-wrap: wrap;
     justify-content: center;
     height: auto;
+    min-height: 3rem;
     width: 100%;
   }
   .lightbox-thumb {
@@ -583,6 +587,8 @@ body.is-locked { overflow: hidden; }
   }
   .lightbox-title { font-size: var(--step-1); }
   .lightbox-description { font-size: var(--step--1); line-height: 1.55; }
+  /* на узком экране строка материалов занимает до трёх строк */
+  .lightbox-meta { min-height: 5.2em; }
   .lightbox-scroll { padding: 3.2rem 0.9rem 0.9rem; }
 }
 
