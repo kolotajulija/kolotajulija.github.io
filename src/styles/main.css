@@ -688,6 +688,9 @@ body.is-locked { overflow: hidden; }
   .lightbox-thumbs { height: min(72vh, 42rem); }
   .lightbox-caption { width: 100%; align-self: start; }
   .lightbox-scroll { padding: 2.5rem clamp(1.5rem, 4vw, 4rem); }
+  /* высоту блока задаёт снимок, а не текст, поэтому центрирование
+     не возвращает скачки при листании */
+  .lightbox-figure { margin: auto; }
 }
 
 @media (min-width: 861px) {
