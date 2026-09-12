@@ -83,6 +83,12 @@ function main(): void {
   initReveal()
 
   document.getElementById('year')!.textContent = String(new Date().getFullYear())
+
+  const version = document.getElementById('footer-version')
+  if (version) {
+    const [y, m, d] = __BUILD_DATE__.split('-')
+    version.textContent = `v${__APP_VERSION__} · ${d}.${m}.${y}`
+  }
 }
 
 main()

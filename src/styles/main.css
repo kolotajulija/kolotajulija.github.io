@@ -407,6 +407,11 @@ h1, h2, h3 {
   color: var(--c-text-dim);
 }
 .footer-meta p { margin: 0; }
+.footer-version {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  opacity: 0.6;
+}
 
 /* ---------- Лайтбокс ---------- */
 .lightbox {
