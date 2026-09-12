@@ -274,5 +274,38 @@
       "en": "A wide silver band given a single twist — a sign of infinity with neither beginning nor end. A Möbius strip has only one side: run a finger along it and you return to where you started without ever turning it over. A bold accent — 125 grams of silver on a leather cord. A pendant like this is remembered, and so is the person wearing it.",
       "lv": "Plata sudraba lente ar vienu pagriezienu — bezgalības zīme, kurai nav ne sākuma, ne gala. Mēbiusa lentei ir tikai viena puse: velc pa to ar pirkstu un atgriezies tur, kur sāki, to ne reizi neapgriežot. Drosmīgs akcents — 125 grami sudraba uz ādas auklas. Tādu kulonu atceras, un līdz ar to arī tā valkātāju."
     }
+  },
+  {
+    "id": "brosa",
+    "status": "sold",
+    "images": [
+      {
+        "small": "images/works/brosa-1-800.jpg",
+        "large": "images/works/brosa-1-1600.jpg"
+      },
+      {
+        "small": "images/works/brosa-2-800.jpg",
+        "large": "images/works/brosa-2-1600.jpg"
+      },
+      {
+        "small": "images/works/brosa-3-800.jpg",
+        "large": "images/works/brosa-3-1600.jpg"
+      }
+    ],
+    "title": {
+      "ru": "Брошь «Роза»",
+      "en": "Rose Brooch",
+      "lv": "Broša «Roze»"
+    },
+    "materials": {
+      "ru": "Серебро 925",
+      "en": "Sterling silver",
+      "lv": "925 sudrabs"
+    },
+    "description": {
+      "ru": "Серебряная роза. Чтобы рассказать о ней, хватает одного слова — роскошь. Лепестки отогнуты по одному, листья прочерчены до прожилок, стебель лёг мягкой линией — цветок, который не завянет и не станет ждать лета. На строгом пальто или на вечернем платье он говорит сам за себя, и добавлять к нему ничего не нужно.",
+      "en": "A rose in silver. One word is enough to tell you about it — opulence. Every petal is turned back by hand, every leaf drawn down to its veins, the stem laid in a soft curve: a flower that will not wilt and does not wait for summer. On a plain coat or an evening dress it speaks for itself, and nothing else needs adding.",
+      "lv": "Sudraba roze. Lai par to pastāstītu, pietiek ar vienu vārdu — greznība. Katra ziedlapa atliekta ar roku, katra lapa iezīmēta līdz dzīsliņai, kāts noliecies maigā līnijā: zieds, kas nenovīst un negaida vasaru. Uz stingra mēteļa vai vakarkleitas tas runā pats par sevi, un neko vairāk piebilst nevajag."
+    }
   }
 ]
