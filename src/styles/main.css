@@ -456,6 +456,20 @@ h1, h2, h3 {
   object-fit: cover;
   box-shadow: none;
 }
+/* на компьютере снимок крупнее: места хватает, а мелкая фотография
+   не даёт рассмотреть работу */
+/* невысокие экраны компьютера: снимок чуть меньше, иначе длинное
+   описание не помещается */
+@media (min-width: 861px) and (max-height: 800px) {
+  #lightbox-image { height: clamp(12rem, 41vh, 26rem); }
+  .lightbox-thumbs { height: clamp(12rem, 41vh, 26rem); }
+}
+
+@media (min-width: 861px) and (min-height: 820px) {
+  #lightbox-image { height: clamp(14rem, 50vh, 34rem); }
+  .lightbox-thumbs { height: clamp(14rem, 50vh, 34rem); }
+}
+
 .lightbox-caption { display: grid; gap: 0.4rem; width: min(100%, 62ch); text-align: left; }
 .lightbox-title { font-size: var(--step-2); }
 .lightbox-meta {
