@@ -43,20 +43,28 @@
     "title": "Process & materials",
     "steps": [
       {
-        "title": "Idea and sketch",
-        "text": "Every piece starts on paper — proportion, weight and the way it will sit on the body."
+        "title": "The idea",
+        "text": "Everything starts with a thought: the wish to make something, to give a feeling a form, or to keep something for good. At first the piece lives in the head and on paper — its proportions, its weight, the way it will sit on a hand or a shoulder."
       },
       {
-        "title": "Metal",
-        "text": "Sterling silver and gold, worked by hand: sawing, forging, soldering, filing."
+        "title": "Materials and tools",
+        "text": "Then comes the metal — sterling silver or gold — and, if the idea asks for colour, a stone as well. The tools are laid out beside them: saw, hammers, torch, files. What is chosen at the start decides everything that follows."
       },
       {
-        "title": "Stone",
-        "text": "Stones are chosen one by one and set to suit the character of the metal."
+        "title": "The parts",
+        "text": "Sheet and wire turn into the parts of the future piece. Each one is made by hand: cut and sawn, forged, annealed in the flame so the metal softens again, soldered or engraved. No single piece needs all of these — every work asks for its own set."
       },
       {
-        "title": "Finish",
-        "text": "Polishing, patina and a final check — each piece exists in a single copy."
+        "title": "Assembly",
+        "text": "The parts are brought together into one composition: fitted to each other, adjusted, and soldered into a single whole. This is the moment when separate scraps of metal first become the thing that was imagined."
+      },
+      {
+        "title": "The stones",
+        "text": "Stones are set at the very end, once the whole structure stands: no flame may come near them after that. Each stone is chosen one by one and seated in a setting made for it."
+      },
+      {
+        "title": "Polishing",
+        "text": "The finished piece is sanded and polished to a shine, washed — and goes to the person it was made for."
       }
     ]
   },

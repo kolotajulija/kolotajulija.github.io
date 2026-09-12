@@ -43,20 +43,28 @@
     "title": "Process un materiāli",
     "steps": [
       {
-        "title": "Ideja un skice",
-        "text": "Katrs darbs sākas uz papīra: proporcijas, svars un tas, kā rota gulsies uz ķermeņa."
+        "title": "Iecere",
+        "text": "Viss sākas ar domu: ar vēlmi kaut ko radīt, sajūtai dot veidolu vai kaut ko saglabāt uz paaudzēm. Sākumā darbs dzīvo galvā un uz papīra — proporcijas, svars, tas, kā lieta gulsies uz rokas vai pleca."
       },
       {
-        "title": "Metāls",
-        "text": "925 sudrabs un zelts, darināts ar rokām: zāģēšana, kalšana, lodēšana, vīlēšana."
+        "title": "Materiāli un darbarīki",
+        "text": "Tad tiek izraudzīts metāls — 925 sudrabs vai zelts — un, ja iecere prasa krāsu, arī akmens. Blakus noliekas darbarīki: finierzāģis, āmuri, deglis, vīlītes. No tā, kas izvēlēts sākumā, atkarīgs viss pārējais."
       },
       {
-        "title": "Akmens",
-        "text": "Akmeņi tiek izvēlēti pa vienam un ielikti atbilstoši metāla raksturam."
+        "title": "Sagataves",
+        "text": "No loksnes un stieples top nākamā darba detaļas. Katra tiek darināta ar rokām: kaut kas tiek izgriezts un izzāģēts, kaut kas izkalts, atkvēlināts ugunī, lai metāls atkal kļūtu mīksts, kaut kas salodēts vai gravēts. Visi paņēmieni vienam darbam nav vajadzīgi — katram ir savs kopums."
       },
       {
-        "title": "Apdare",
-        "text": "Pulēšana, patina un pēdējā pārbaude — katrs darbs pastāv vienā eksemplārā."
+        "title": "Salikšana",
+        "text": "Detaļas savienojas vienā kompozīcijā: tiek pielaikotas, palabotas un salodētas vienā veselumā. Tas ir brīdis, kad atsevišķi metāla gabaliņi pirmoreiz kļūst par ieceres lietu."
+      },
+      {
+        "title": "Akmeņi",
+        "text": "Akmeņus iestiprina pašās beigās, kad viss jau salikts: pēc tam uguni tuvumā vairs laist nedrīkst. Katrs akmens izraudzīts atsevišķi un ieguļ ietvarā, kas darināts tieši tam."
+      },
+      {
+        "title": "Pulēšana",
+        "text": "Gatavais darbs tiek slīpēts un pulēts līdz spīdumam, nomazgāts — un dodas pie tā, kam tas radīts."
       }
     ]
   },
