@@ -76,6 +76,48 @@
     }
   },
   {
+    "id": "aproce-vita",
+    "group": "jewellery",
+    "status": "available",
+    "images": [
+      {
+        "small": "images/works/aproce-vita-1-800.jpg",
+        "large": "images/works/aproce-vita-1-1600.jpg"
+      },
+      {
+        "small": "images/works/aproce-vita-2-800.jpg",
+        "large": "images/works/aproce-vita-2-1600.jpg"
+      },
+      {
+        "small": "images/works/aproce-vita-3-800.jpg",
+        "large": "images/works/aproce-vita-3-1600.jpg"
+      },
+      {
+        "small": "images/works/aproce-vita-4-800.jpg",
+        "large": "images/works/aproce-vita-4-1600.jpg"
+      },
+      {
+        "small": "images/works/aproce-vita-5-800.jpg",
+        "large": "images/works/aproce-vita-5-1600.jpg"
+      }
+    ],
+    "title": {
+      "ru": "Витой браслет",
+      "en": "Twisted bracelet",
+      "lv": "Vītā aproce"
+    },
+    "materials": {
+      "ru": "Серебро 925",
+      "en": "Sterling silver",
+      "lv": "925 sudrabs"
+    },
+    "description": {
+      "ru": "Гладкие и витые звенья чередуются друг с другом, и каждое из них спаяно — браслет получился прочным и надёжным, время ему не помеха. Он продолжает мысль витой цепи: передать силу самой природы, её вечность и несокрушимость — теперь на запястье.",
+      "en": "Smooth and twisted links take turns, and every one of them is soldered shut — the bracelet is strong and dependable, and time has no hold on it. It carries on the idea of the twisted chain: to convey the force of nature itself, its permanence and its refusal to be broken — now on the wrist.",
+      "lv": "Gludie un vītie posmi mijas cits ar citu, un katrs no tiem ir salodēts — aproce ir izturīga un droša, un laikam pār to nav varas. Tā turpina vītās ķēdes domu: nodot pašas dabas spēku, tās mūžību un nesalaužamību — nu jau uz plaukstas locītavas."
+    }
+  },
+  {
     "id": "roze",
     "group": "art",
     "status": "order",
