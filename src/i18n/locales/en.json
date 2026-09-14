@@ -30,7 +30,12 @@
     "open": "Open the piece",
     "available": "Available",
     "sold": "Sold",
-    "order": "Made to order"
+    "order": "Made to order",
+    "groups": {
+      "stones": "Works with natural stones",
+      "art": "Art",
+      "jewellery": "Jewellery"
+    }
   },
   "about": {
     "eyebrow": "Get to know me",

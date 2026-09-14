@@ -30,7 +30,12 @@
     "open": "Atvērt darbu",
     "available": "Pieejams",
     "sold": "Pārdots",
-    "order": "Pēc pasūtījuma"
+    "order": "Pēc pasūtījuma",
+    "groups": {
+      "stones": "Darbi ar dabīgajiem akmeņiem",
+      "art": "Māksla",
+      "jewellery": "Juvelierizstrādājumi"
+    }
   },
   "about": {
     "eyebrow": "Iepazīšanās",

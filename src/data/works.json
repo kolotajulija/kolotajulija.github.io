@@ -1,6 +1,7 @@
 [
   {
     "id": "lilija",
+    "group": "stones",
     "status": "sold",
     "images": [
       {
@@ -38,6 +39,7 @@
   },
   {
     "id": "cepj",
+    "group": "jewellery",
     "status": "sold",
     "images": [
       {
@@ -75,6 +77,7 @@
   },
   {
     "id": "roze",
+    "group": "art",
     "status": "order",
     "images": [
       {
@@ -126,6 +129,7 @@
   },
   {
     "id": "pijons",
+    "group": "art",
     "status": "order",
     "images": [
       {
@@ -161,6 +165,7 @@
   },
   {
     "id": "aproce",
+    "group": "stones",
     "status": "available",
     "images": [
       {
@@ -198,6 +203,7 @@
   },
   {
     "id": "auskari",
+    "group": "jewellery",
     "status": "available",
     "images": [
       {
@@ -235,6 +241,7 @@
   },
   {
     "id": "kulons",
+    "group": "jewellery",
     "status": "sold",
     "images": [
       {
@@ -260,9 +267,9 @@
       "lv": "Mēbiuss"
     },
     "materials": {
-      "ru": "Серебро 925, 125 г",
-      "en": "Sterling silver, 125 g",
-      "lv": "925 sudrabs, 125 g"
+      "ru": "Серебро 925, 12 г",
+      "en": "Sterling silver, 12 g",
+      "lv": "925 sudrabs, 12 g"
     },
     "lead": {
       "ru": "сделан на заказ",
@@ -270,13 +277,14 @@
       "lv": "darināts pēc pasūtījuma"
     },
     "description": {
-      "ru": "Широкая серебряная лента, перекрученная одним витком, — знак бесконечности, у которого нет ни начала, ни конца. У ленты Мёбиуса всего одна сторона: ведёшь по ней пальцем и возвращаешься туда, откуда начал, ни разу её не перевернув. Крупный и смелый акцент — 125 граммов серебра на кожаном шнуре. Такой кулон запоминают, а вместе с ним и того, кто его носит.",
-      "en": "A wide silver band given a single twist — a sign of infinity with neither beginning nor end. A Möbius strip has only one side: run a finger along it and you return to where you started without ever turning it over. A bold accent — 125 grams of silver on a leather cord. A pendant like this is remembered, and so is the person wearing it.",
-      "lv": "Plata sudraba lente ar vienu pagriezienu — bezgalības zīme, kurai nav ne sākuma, ne gala. Mēbiusa lentei ir tikai viena puse: velc pa to ar pirkstu un atgriezies tur, kur sāki, to ne reizi neapgriežot. Drosmīgs akcents — 125 grami sudraba uz ādas auklas. Tādu kulonu atceras, un līdz ar to arī tā valkātāju."
+      "ru": "Широкая серебряная лента, перекрученная одним витком, — знак бесконечности, у которого нет ни начала, ни конца. У ленты Мёбиуса всего одна сторона: ведёшь по ней пальцем и возвращаешься туда, откуда начал, ни разу её не перевернув. Смелый акцент — 12 граммов серебра на кожаном шнуре. Такой кулон запоминают, а вместе с ним и того, кто его носит.",
+      "en": "A wide silver band given a single twist — a sign of infinity with neither beginning nor end. A Möbius strip has only one side: run a finger along it and you return to where you started without ever turning it over. A bold accent — 12 grams of silver on a leather cord. A pendant like this is remembered, and so is the person wearing it.",
+      "lv": "Plata sudraba lente ar vienu pagriezienu — bezgalības zīme, kurai nav ne sākuma, ne gala. Mēbiusa lentei ir tikai viena puse: velc pa to ar pirkstu un atgriezies tur, kur sāki, to ne reizi neapgriežot. Drosmīgs akcents — 12 grami sudraba uz ādas auklas. Tādu kulonu atceras, un līdz ar to arī tā valkātāju."
     }
   },
   {
     "id": "brosa",
+    "group": "jewellery",
     "status": "sold",
     "images": [
       {

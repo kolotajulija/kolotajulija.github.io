@@ -4,8 +4,11 @@ import { getLang, t, tRaw, type LangCode } from '../i18n'
 
 type Localized = Partial<Record<LangCode, string>>
 type WorkImage = { small: string; large: string }
+/** Раздел галереи: работы с натуральными камнями, искусство, ювелирные изделия. */
+type Group = 'stones' | 'art' | 'jewellery'
 type Work = {
   id: string
+  group: Group
   status: 'available' | 'sold' | 'order'
   lead?: Localized
   images: WorkImage[]
@@ -20,7 +23,11 @@ type Step = { title: string; text: string }
 /** Один кадр в лайтбоксе: сам снимок и работа, которой он принадлежит. */
 export type Slide = { work: Work; image: WorkImage; position: number; total: number }
 
-const works = worksData as Work[]
+/** Порядок разделов в галерее; внутри раздела работы идут как в works.json. */
+const GROUPS: Group[] = ['stones', 'art', 'jewellery']
+
+// лента лайтбокса идёт в том же порядке, что и карточки на странице
+const works = GROUPS.flatMap((group) => (worksData as Work[]).filter((w) => w.group === group))
 const contacts = contactsData as Contact[]
 
 /** Путь к файлу в public/ с учётом base (важно для GitHub Pages). */
@@ -47,11 +54,10 @@ export function getSlides(): Slide[] {
 }
 
 export function renderGallery(onOpen: (slideIndex: number) => void): void {
-  const grid = document.getElementById('gallery-grid')!
+  const host = document.getElementById('gallery-grid')!
   let slideIndex = 0
 
-  grid.replaceChildren(
-    ...works.map((work) => {
+  const card = (work: Work): HTMLButtonElement => {
       const firstSlide = slideIndex
       slideIndex += work.images.length
 
@@ -100,6 +106,20 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
       button.append(frame, caption)
       button.addEventListener('click', () => onOpen(firstSlide))
       return button
+  }
+
+  host.replaceChildren(
+    ...GROUPS.filter((group) => works.some((w) => w.group === group)).map((group) => {
+      const section = document.createElement('section')
+      section.className = 'gallery-group'
+      const heading = document.createElement('h3')
+      heading.className = 'gallery-group-title'
+      heading.textContent = t(`gallery.groups.${group}`)
+      const grid = document.createElement('div')
+      grid.className = 'gallery-grid'
+      grid.append(...works.filter((w) => w.group === group).map(card))
+      section.append(heading, grid)
+      return section
     }),
   )
 }
