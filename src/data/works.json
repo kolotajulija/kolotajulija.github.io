@@ -372,8 +372,24 @@
         "large": "images/works/gramatzime-1-1600.jpg"
       },
       {
+        "small": "images/works/gramatzime-3-800.jpg",
+        "large": "images/works/gramatzime-3-1600.jpg"
+      },
+      {
+        "small": "images/works/gramatzime-4-800.jpg",
+        "large": "images/works/gramatzime-4-1600.jpg"
+      },
+      {
+        "small": "images/works/gramatzime-6-800.jpg",
+        "large": "images/works/gramatzime-6-1600.jpg"
+      },
+      {
         "small": "images/works/gramatzime-2-800.jpg",
         "large": "images/works/gramatzime-2-1600.jpg"
+      },
+      {
+        "small": "images/works/gramatzime-5-800.jpg",
+        "large": "images/works/gramatzime-5-1600.jpg"
       }
     ],
     "title": {
