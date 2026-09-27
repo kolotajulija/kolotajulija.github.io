@@ -58,6 +58,24 @@ export function createLightbox(): (index: number) => void {
         return button
       }),
     )
+    // кадров может быть два десятка: полоса прокручивается, и текущую
+    // миниатюру нужно подвести в середину — положение считаем сами, потому
+    // что снимки в полосе догружаются и браузер промахивается
+    const active = thumbs.querySelector<HTMLElement>('.lightbox-thumb[aria-current="true"]')
+    if (active) {
+      // при открытии по ссылке полоса ещё не разложена и промахивается,
+      // поэтому доводим несколько раз
+      const center = () => {
+        if (thumbs.scrollHeight > thumbs.clientHeight + 2) {
+          thumbs.scrollTop = active.offsetTop - (thumbs.clientHeight - active.offsetHeight) / 2
+        } else if (thumbs.scrollWidth > thumbs.clientWidth + 2) {
+          thumbs.scrollLeft = active.offsetLeft - (thumbs.clientWidth - active.offsetWidth) / 2
+        }
+      }
+      requestAnimationFrame(center)
+      setTimeout(center, 160)
+      setTimeout(center, 420)
+    }
   }
 
   const show = (i: number) => {

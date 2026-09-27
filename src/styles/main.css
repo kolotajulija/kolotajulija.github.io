@@ -790,3 +790,30 @@ body.is-locked { overflow: hidden; }
   .lightbox-description { line-height: 1.5; }
 }
 
+/* ---------- Много кадров у одной работы ---------- */
+/* два десятка миниатюр не помещаются столбиком и строкой: полоса едет,
+   а сами миниатюры не мельчают ниже читаемого размера */
+.lightbox-thumbs {
+  overflow: auto;
+  scrollbar-width: none;
+  scroll-behavior: auto;
+}
+.lightbox-thumbs::-webkit-scrollbar { display: none; }
+.lightbox-thumb {
+  min-height: 2.2rem;
+  scroll-snap-align: center;
+}
+
+@media (max-width: 640px) {
+  /* на телефоне — одна строка с прокруткой вбок, а не четыре ряда */
+  .lightbox-thumbs {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  .lightbox-thumb { height: 2.9rem; width: 2.9rem; min-height: 2.9rem; }
+}
+
