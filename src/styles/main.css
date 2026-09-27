@@ -258,11 +258,24 @@ h1, h2, h3 {
 /* фильтр галереи: кнопка оставляет на странице один раздел */
 .gallery-filters {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1.4rem;
+  /* одна строка: на телефоне она уезжает вбок, а не растёт в три ряда */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 1.4rem;
+  /* строка остаётся под шапкой, пока листаешь галерею */
+  position: sticky;
+  top: var(--header-height, 4.9rem);
+  z-index: 20;
   margin-bottom: var(--space-l);
+  padding-block: var(--space-s);
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-line);
 }
+.gallery-filters::-webkit-scrollbar { display: none; }
 .gallery-filter {
+  flex: none;
+  white-space: nowrap;
   border: 0;
   padding: 0.35rem 0;
   background: none;

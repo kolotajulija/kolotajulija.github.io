@@ -19,6 +19,13 @@ export function initNav(): void {
   links.forEach((link) => link.addEventListener('click', closeMenu))
   window.addEventListener('resize', closeMenu)
 
+  // кнопки фильтра липнут под шапкой, поэтому её высота нужна стилям
+  const setHeaderHeight = () => {
+    document.documentElement.style.setProperty('--header-height', `${Math.round(header.offsetHeight)}px`)
+  }
+  setHeaderHeight()
+  window.addEventListener('resize', setHeaderHeight)
+
   const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8)
   onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
