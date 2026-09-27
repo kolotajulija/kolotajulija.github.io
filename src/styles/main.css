@@ -285,6 +285,8 @@ h1, h2, h3 {
   column-gap: clamp(1rem, 2.5vw, 2rem);
   row-gap: clamp(3.5rem, 7vw, 5.5rem);
 }
+/* фильтр прячет карточку: свой display у .work перебивает обычное [hidden] */
+.work[hidden] { display: none; }
 .work {
   height: 100%;
   border: 0;
