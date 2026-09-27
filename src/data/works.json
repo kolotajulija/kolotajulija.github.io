@@ -1,7 +1,10 @@
 [
   {
     "id": "lilija",
-    "group": "stones",
+    "group": [
+      "stones",
+      "jewellery"
+    ],
     "status": "sold",
     "images": [
       {

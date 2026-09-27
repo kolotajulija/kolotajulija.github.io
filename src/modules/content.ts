@@ -9,7 +9,7 @@ type WorkImage = { small: string; large: string }
 type Group = 'stones' | 'art' | 'jewellery'
 type Work = {
   id: string
-  group: Group
+  group: Group | Group[]
   status: 'available' | 'sold' | 'order'
   lead?: Localized
   images: WorkImage[]
@@ -27,8 +27,14 @@ export type Slide = { work: Work; image: WorkImage; position: number; total: num
 /** Порядок разделов в галерее; внутри раздела работы идут как в works.json. */
 const GROUPS: Group[] = ['stones', 'art', 'jewellery']
 
-// лента лайтбокса идёт в том же порядке, что и карточки на странице
-const works = GROUPS.flatMap((group) => (worksData as Work[]).filter((w) => w.group === group))
+/** Работа может числиться в нескольких разделах сразу. */
+const groupsOf = (work: Work): Group[] => (Array.isArray(work.group) ? work.group : [work.group])
+
+// лента лайтбокса идёт в том же порядке, что и карточки: работы стоят по
+// своему первому разделу, каждая по одному разу
+const works = [...(worksData as Work[])].sort(
+  (a, b) => GROUPS.indexOf(groupsOf(a)[0]) - GROUPS.indexOf(groupsOf(b)[0]),
+)
 const contacts = contactsData as Contact[]
 
 /** Путь к файлу в public/ с учётом base (важно для GitHub Pages). */
@@ -64,7 +70,7 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
       const button = document.createElement('button')
       button.type = 'button'
       button.className = 'work'
-      button.dataset.group = work.group
+      button.dataset.groups = groupsOf(work).join(' ')
       button.setAttribute('aria-label', `${workTitle(work)} — ${t('gallery.open')}`)
 
       const frame = document.createElement('div')
@@ -119,7 +125,7 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
 
   const apply = (group: Group | null) => {
     grid.querySelectorAll<HTMLElement>('.work').forEach((el) => {
-      el.hidden = group !== null && el.dataset.group !== group
+      el.hidden = group !== null && !(el.dataset.groups ?? '').split(' ').includes(group)
     })
     filters?.querySelectorAll<HTMLButtonElement>('.gallery-filter').forEach((b) => {
       const on = (b.dataset.group ?? '') === (group ?? '')
