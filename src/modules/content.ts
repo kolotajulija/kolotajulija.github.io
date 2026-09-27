@@ -1,6 +1,7 @@
 import worksData from '../data/works.json'
 import contactsData from '../data/contacts.json'
 import { getLang, t, tRaw, type LangCode } from '../i18n'
+import { updateUrl } from './url'
 
 type Localized = Partial<Record<LangCode, string>>
 type WorkImage = { small: string; large: string }
@@ -54,7 +55,6 @@ export function getSlides(): Slide[] {
 }
 
 export function renderGallery(onOpen: (slideIndex: number) => void): void {
-  const host = document.getElementById('gallery-grid')!
   let slideIndex = 0
 
   const card = (work: Work): HTMLButtonElement => {
@@ -64,6 +64,7 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
       const button = document.createElement('button')
       button.type = 'button'
       button.className = 'work'
+      button.dataset.group = work.group
       button.setAttribute('aria-label', `${workTitle(work)} — ${t('gallery.open')}`)
 
       const frame = document.createElement('div')
@@ -108,20 +109,45 @@ export function renderGallery(onOpen: (slideIndex: number) => void): void {
       return button
   }
 
-  host.replaceChildren(
-    ...GROUPS.filter((group) => works.some((w) => w.group === group)).map((group) => {
-      const section = document.createElement('section')
-      section.className = 'gallery-group'
-      const heading = document.createElement('h3')
-      heading.className = 'gallery-group-title'
-      heading.textContent = t(`gallery.groups.${group}`)
-      const grid = document.createElement('div')
-      grid.className = 'gallery-grid'
-      grid.append(...works.filter((w) => w.group === group).map(card))
-      section.append(heading, grid)
-      return section
-    }),
-  )
+  const grid = document.getElementById('gallery-grid')!
+  grid.replaceChildren(...works.map(card))
+
+  // фильтр: по умолчанию видно всё, кнопка оставляет один раздел
+  const filters = document.getElementById('gallery-filters')
+  const current = new URLSearchParams(window.location.search).get('group')
+  const active = GROUPS.includes(current as Group) ? (current as Group) : null
+
+  const apply = (group: Group | null) => {
+    grid.querySelectorAll<HTMLElement>('.work').forEach((el) => {
+      el.hidden = group !== null && el.dataset.group !== group
+    })
+    filters?.querySelectorAll<HTMLButtonElement>('.gallery-filter').forEach((b) => {
+      const on = (b.dataset.group ?? '') === (group ?? '')
+      b.classList.toggle('is-active', on)
+      b.setAttribute('aria-pressed', String(on))
+    })
+    updateUrl({ group })
+  }
+
+  if (filters) {
+    const buttons: Array<{ group: Group | null; label: string }> = [
+      { group: null, label: t('gallery.groups.all') },
+      ...GROUPS.map((group) => ({ group, label: t(`gallery.groups.${group}`) })),
+    ]
+    filters.replaceChildren(
+      ...buttons.map(({ group, label }) => {
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.className = 'gallery-filter'
+        button.dataset.group = group ?? ''
+        button.textContent = label
+        button.addEventListener('click', () => apply(group))
+        return button
+      }),
+    )
+  }
+
+  apply(active)
 }
 
 export function renderProcess(): void {
@@ -171,7 +197,7 @@ export function renderContacts(): void {
   )
 }
 
-type Testimonial = { quote: string; author: string; note?: string }
+type Testimonial = { quote: string; author: string; note?: string; photo?: { small: string; large: string; alt?: string } }
 
 export function renderTestimonials(): void {
   const list = document.getElementById('testimonial-list')
@@ -182,6 +208,19 @@ export function renderTestimonials(): void {
       const li = document.createElement('li')
       const figure = document.createElement('figure')
       figure.className = 'testimonial'
+
+      if (item.photo) {
+        figure.classList.add('has-photo')
+        const img = document.createElement('img')
+        img.className = 'testimonial-photo'
+        img.src = asset(item.photo.small)
+        img.srcset = `${asset(item.photo.small)} 800w, ${asset(item.photo.large)} 1600w`
+        img.sizes = '(max-width: 700px) 100vw, 13rem'
+        img.alt = item.photo.alt ?? item.author
+        img.loading = 'lazy'
+        img.decoding = 'async'
+        figure.append(img)
+      }
 
       const quote = document.createElement('blockquote')
       quote.textContent = item.quote

@@ -32,6 +32,7 @@
     "sold": "Sold",
     "order": "Made to order",
     "groups": {
+      "all": "All works",
       "stones": "Works with natural stones",
       "art": "Art",
       "jewellery": "Jewellery"
@@ -80,7 +81,12 @@
       {
         "quote": "Julija, thank you so much for the wonderful bracelets you made for me — with love and attention to every detail! They are beautiful both to look at and to hold. Thank you again, with all my heart!",
         "author": "A client",
-        "note": "bracelets made to commission"
+        "note": "bracelets made to commission",
+        "photo": {
+          "small": "images/testimonials/klient-1-800.jpg",
+          "large": "images/testimonials/klient-1-1600.jpg",
+          "alt": "Julija Kolota with her client"
+        }
       }
     ]
   },

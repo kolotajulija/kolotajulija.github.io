@@ -32,6 +32,7 @@
     "sold": "Pārdots",
     "order": "Pēc pasūtījuma",
     "groups": {
+      "all": "Visi darbi",
       "stones": "Darbi ar dabīgajiem akmeņiem",
       "art": "Māksla",
       "jewellery": "Juvelierizstrādājumi"
@@ -80,7 +81,12 @@
       {
         "quote": "Jūlija, milzīgs paldies par brīnišķīgajām aprocēm, ko Jūs man darinājāt, — ar mīlestību un uzmanību pret katru detaļu! Tās ir skaistas gan acij, gan taustei! Vēlreiz paldies no visas sirds!",
         "author": "Pasūtītāja",
-        "note": "aproces pēc pasūtījuma"
+        "note": "aproces pēc pasūtījuma",
+        "photo": {
+          "small": "images/testimonials/klient-1-800.jpg",
+          "large": "images/testimonials/klient-1-1600.jpg",
+          "alt": "Julija Kolota ar pasūtītāju"
+        }
       }
     ]
   },

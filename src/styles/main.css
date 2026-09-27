@@ -255,14 +255,28 @@ h1, h2, h3 {
 .section-head { margin-bottom: var(--space-l); }
 
 /* ---------- Галерея ---------- */
-/* три раздела подряд: камни, искусство, ювелирные изделия */
-.gallery-groups { display: grid; gap: clamp(4.5rem, 9vw, 7rem); }
-.gallery-group-title {
-  font-size: var(--step-1);
-  padding-top: var(--space-s);
-  border-top: var(--border-thin);
-  margin: 0 0 var(--space-m);
+/* фильтр галереи: кнопка оставляет на странице один раздел */
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  margin-bottom: var(--space-l);
 }
+.gallery-filter {
+  border: 0;
+  padding: 0.35rem 0;
+  background: none;
+  color: var(--c-text-dim);
+  font-family: inherit;
+  font-size: var(--step--1);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+.gallery-filter:hover { color: var(--c-text); }
+.gallery-filter.is-active { color: var(--c-accent); border-bottom-color: var(--c-accent); }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
@@ -664,6 +678,22 @@ body.is-locked { overflow: hidden; }
   gap: clamp(1.5rem, 3vw, 3rem);
 }
 .testimonial { margin: 0; display: grid; gap: var(--space-s); height: 100%; max-width: 46rem; }
+/* отзыв с фотографией: снимок сверху на телефоне, слева от слов на широком экране */
+.testimonial.has-photo {
+  grid-template-areas: "photo" "quote" "caption";
+  gap: var(--space-m);
+  max-width: 52rem;
+}
+.testimonial-photo {
+  grid-area: photo;
+  width: 100%;
+  max-width: 16rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: var(--c-surface);
+}
+.testimonial.has-photo blockquote { grid-area: quote; }
+.testimonial.has-photo figcaption { grid-area: caption; }
 .testimonial blockquote {
   margin: 0;
   font-family: var(--font-display);
@@ -714,4 +744,16 @@ body.is-locked { overflow: hidden; }
 @media (min-width: 900px) {
   /* шесть шагов ложатся ровно тремя колонками в два ряда */
   .process-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 700px) {
+  /* фотография встаёт колонкой слева, слова — справа от неё */
+  .testimonial.has-photo {
+    grid-template-columns: 13rem 1fr;
+    grid-template-areas: "photo quote" "photo caption";
+    align-items: start;
+    column-gap: var(--space-m);
+    row-gap: var(--space-s);
+  }
+  .testimonial-photo { max-width: none; }
 }
