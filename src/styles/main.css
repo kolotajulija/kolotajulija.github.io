@@ -663,7 +663,7 @@ body.is-locked { overflow: hidden; }
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: clamp(1.5rem, 3vw, 3rem);
 }
-.testimonial { margin: 0; display: grid; gap: var(--space-s); height: 100%; }
+.testimonial { margin: 0; display: grid; gap: var(--space-s); height: 100%; max-width: 46rem; }
 .testimonial blockquote {
   margin: 0;
   font-family: var(--font-display);

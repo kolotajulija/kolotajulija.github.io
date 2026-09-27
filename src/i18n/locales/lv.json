@@ -78,19 +78,9 @@
     "title": "Ko saka klienti",
     "items": [
       {
-        "quote": "Teksta vietturis. Pāris teikumu no klienta — par pašu darbu un par sadarbību.",
-        "author": "Klienta vārds",
-        "note": "pasūtīts gredzens, 2024"
-      },
-      {
-        "quote": "Otra vietturis atsauksme — aizstāsim ar īstu, kad tāda būs.",
-        "author": "Klienta vārds",
-        "note": "auskari, 2023"
-      },
-      {
-        "quote": "Trešā. Trīs īsas atsauksmes lasās labāk nekā viena gara.",
-        "author": "Klienta vārds",
-        "note": "laulību gredzeni, 2023"
+        "quote": "Jūlija, milzīgs paldies par brīnišķīgajām aprocēm, ko Jūs man darinājāt, — ar mīlestību un uzmanību pret katru detaļu! Tās ir skaistas gan acij, gan taustei! Vēlreiz paldies no visas sirds!",
+        "author": "Pasūtītāja",
+        "note": "aproces pēc pasūtījuma"
       }
     ]
   },
