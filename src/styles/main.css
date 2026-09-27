@@ -269,7 +269,10 @@ h1, h2, h3 {
   z-index: 20;
   margin-bottom: var(--space-l);
   padding-block: var(--space-s);
-  background: var(--c-bg);
+  /* полупрозрачно с размытием, как шапка: полоса читается слоем поверх
+     снимка, а не разрывом в нём */
+  background: color-mix(in srgb, var(--c-bg) 82%, transparent);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--c-line);
 }
 .gallery-filters::-webkit-scrollbar { display: none; }
