@@ -1,5 +1,6 @@
 import {
   asset,
+  contactEmail,
   getSlides,
   workDescription,
   workMaterials,
@@ -9,6 +10,7 @@ import {
   type Slide,
 } from './content'
 import { updateUrl } from './url'
+import { t } from '../i18n'
 
 /**
  * Полноэкранный просмотр. Листать можно четырьмя способами: стрелками по краям,
@@ -21,6 +23,7 @@ export function createLightbox(): (index: number) => void {
   const title = document.getElementById('lightbox-title')!
   const meta = document.getElementById('lightbox-meta')!
   const description = document.getElementById('lightbox-description')!
+  const write = document.getElementById('lightbox-write') as HTMLAnchorElement
   const thumbs = document.getElementById('lightbox-thumbs')!
   const prev = document.getElementById('lightbox-prev') as HTMLButtonElement
   const next = document.getElementById('lightbox-next') as HTMLButtonElement
@@ -69,6 +72,14 @@ export function createLightbox(): (index: number) => void {
       .filter(Boolean)
       .join(' · ')
     description.textContent = workDescription(work)
+
+    // письмо открывается с названием работы в теме: человеку не нужно
+    // объяснять, о чём он пишет
+    const sold = work.status === 'sold'
+    write.textContent = t(sold ? 'gallery.writeSimilar' : 'gallery.write')
+    const subject = `${workTitle(work)} — ${t(sold ? 'gallery.mailSimilar' : 'gallery.mailAsk')}`
+    write.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`
+
     updateUrl({ work: work.id, photo: String(position) })
 
     const single = slides.length < 2

@@ -37,6 +37,9 @@ const works = [...(worksData as Work[])].sort(
 )
 const contacts = contactsData as Contact[]
 
+/** Почта для писем о работах — берётся из контактов, чтобы не расходиться с ними. */
+export const contactEmail = contacts.find((c) => c.key === 'email')?.value ?? ''
+
 /** Путь к файлу в public/ с учётом base (важно для GitHub Pages). */
 export function asset(path: string): string {
   return import.meta.env.BASE_URL.replace(/\/$/, '') + '/' + path.replace(/^\//, '')

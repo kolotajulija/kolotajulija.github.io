@@ -36,7 +36,11 @@
       "stones": "Works with natural stones",
       "art": "Art",
       "jewellery": "Jewellery"
-    }
+    },
+    "write": "Ask about this piece",
+    "writeSimilar": "Order something similar",
+    "mailAsk": "a question about this piece",
+    "mailSimilar": "I would like something similar"
   },
   "about": {
     "eyebrow": "Get to know me",

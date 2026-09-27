@@ -36,7 +36,11 @@
       "stones": "Darbi ar dabīgajiem akmeņiem",
       "art": "Māksla",
       "jewellery": "Juvelierizstrādājumi"
-    }
+    },
+    "write": "Pajautāt par šo darbu",
+    "writeSimilar": "Pasūtīt līdzīgu",
+    "mailAsk": "jautājums par darbu",
+    "mailSimilar": "vēlos līdzīgu"
   },
   "about": {
     "eyebrow": "Iepazīšanās",

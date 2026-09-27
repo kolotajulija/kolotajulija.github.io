@@ -527,6 +527,11 @@ h1, h2, h3 {
   text-transform: uppercase;
   color: var(--c-text-dim);
 }
+.lightbox-write {
+  justify-self: start;
+  margin-top: 0.2rem;
+  font-size: var(--step--1);
+}
 .lightbox-description { margin: 0; color: var(--c-text-dim); line-height: 1.65; }
 .lightbox-close, .lightbox-nav {
   /* привязка к экрану, а не к содержимому: при прокрутке к описанию
@@ -775,3 +780,13 @@ body.is-locked { overflow: hidden; }
   }
   .testimonial-photo { max-width: none; }
 }
+
+@media (max-height: 780px) and (min-width: 861px) {
+  /* невысокий ноутбук: кнопка «написать» добавила строку, поэтому снимок
+     и подпись ужимаются — окно просмотра должно влезать целиком */
+  .lightbox-scroll { padding-block: 1.25rem; }
+  #lightbox-image { height: clamp(9rem, 32vh, 30rem); }
+  .lightbox-caption { gap: 0.25rem; }
+  .lightbox-description { line-height: 1.5; }
+}
+
