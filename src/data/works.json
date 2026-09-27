@@ -345,7 +345,10 @@
   },
   {
     "id": "brosa",
-    "group": "jewellery",
+    "group": [
+      "jewellery",
+      "art"
+    ],
     "status": "sold",
     "images": [
       {
