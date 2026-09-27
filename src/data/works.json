@@ -434,5 +434,51 @@
       "en": "A pair of bookmarks for a husband and a wife. An oak leaf and apple blossom come together in them. The oak grows slowly and stands for centuries — a tree of strength, endurance and shelter; in Latvia it is the man who wears the oak wreath at midsummer. The blossoming apple tree is tenderness and beginning: its flowering is brief, yet the fruit is born of it. Together they are a family — support and blossom, steadiness and softness, and neither is whole without the other. And a bookmark like this is a pleasure to hold while reading: cool silver, a calm weight, the veins of the leaf under your finger. You close the book, and the silver branch stays waiting for you on the right page.",
       "lv": "Pāra grāmatzīmes vīram un sievai. Tajās satiekas ozola lapa un ābeles ziedi. Ozols aug lēni un stāv gadsimtiem — spēka, izturības un patvēruma koks; Latvijā ozolu vainagu Jāņos liek vīrietim. Ziedošā ābele ir maigums un sākums: tās ziedēšana ir īsa, bet tieši no tās dzimst auglis. Kopā tie ir ģimene — balsts un ziedēšana, drošība un maigums, un viens bez otra nav pilnīgs. Un tādu grāmatzīmi lasot ir īpaši patīkami turēt rokās: vēss sudrabs, mierīgs svars, lapas dzīslas zem pirksta. Aizver grāmatu — un sudraba zars paliek gaidām tevi vajadzīgajā lappusē."
     }
+  },
+  {
+    "id": "akmens-aproces",
+    "group": "stones",
+    "status": "order",
+    "images": [
+      {
+        "small": "images/works/akmens-aproces-1-800.jpg",
+        "large": "images/works/akmens-aproces-1-1600.jpg"
+      },
+      {
+        "small": "images/works/akmens-aproces-2-800.jpg",
+        "large": "images/works/akmens-aproces-2-1600.jpg"
+      },
+      {
+        "small": "images/works/akmens-aproces-3-800.jpg",
+        "large": "images/works/akmens-aproces-3-1600.jpg"
+      },
+      {
+        "small": "images/works/akmens-aproces-4-800.jpg",
+        "large": "images/works/akmens-aproces-4-1600.jpg"
+      },
+      {
+        "small": "images/works/akmens-aproces-5-800.jpg",
+        "large": "images/works/akmens-aproces-5-1600.jpg"
+      },
+      {
+        "small": "images/works/akmens-aproces-6-800.jpg",
+        "large": "images/works/akmens-aproces-6-1600.jpg"
+      }
+    ],
+    "title": {
+      "ru": "Браслеты-обереги",
+      "en": "Talisman bracelets",
+      "lv": "Sargājošās aproces"
+    },
+    "materials": {
+      "ru": "Натуральные камни",
+      "en": "Natural stones",
+      "lv": "Dabīgie akmeņi"
+    },
+    "description": {
+      "ru": "Камни я перебираю руками: смотрю, как в них ложится свет, и собираю круг так, чтобы он лёг на руку спокойно. Камень растёт в земле миллионы лет, и рисунок внутри него не повторяется никогда — как не повторяются люди. Поэтому браслет всегда находит своего человека: кто-то тянется к прозрачно-голубому, кто-то к зелёному, кто-то к тёплому персиковому, и это не случайность. Оберег — не обещание и не волшебство; это вещь, которая тихо напоминает, что тебя держит что-то большее и древнее тебя. Такой браслет носят каждый день — и камню это только на пользу.",
+      "en": "I sort the stones by hand: I watch how the light settles in them and string the circle so that it rests easily on the wrist. A stone grows in the earth for millions of years, and the pattern inside it never repeats — just as people never repeat. That is why a bracelet always finds its person: one is drawn to clear blue, another to green, another to warm peach, and it is never quite by chance. A talisman is not a promise and not magic; it is a thing that quietly reminds you that something older and larger than you is holding you. A bracelet like this is worn every day — and the stone is all the better for it.",
+      "lv": "Akmeņus pārbiru ar rokām: skatos, kā tajos gulstas gaisma, un veru apli tā, lai tas mierīgi gulstas uz rokas. Akmens zemē aug miljoniem gadu, un raksts tā iekšienē neatkārtojas nekad — tāpat kā neatkārtojas cilvēki. Tāpēc aproce vienmēr atrod savu cilvēku: viens tiecas pēc dzidri zila, cits pēc zaļa, vēl cits pēc silti persiku krāsas, un tā nav nejaušība. Sargs nav solījums un nav burvība; tā ir lieta, kas klusi atgādina, ka tevi tur kaut kas senāks un lielāks par tevi. Tādu aproci valkā ikdienā — un akmenim tas nāk tikai par labu."
+    }
   }
 ]
