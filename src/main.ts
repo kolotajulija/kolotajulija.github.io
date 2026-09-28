@@ -6,6 +6,7 @@ import { initNav } from './modules/nav'
 import { initReveal } from './modules/reveal'
 import { renderContacts, renderGallery, renderProcess, renderTestimonials } from './modules/content'
 import { createLightbox } from './modules/lightbox'
+import { initOrder } from './modules/order'
 import { getSlides } from './modules/content'
 import { lockSection, readUrl, updateUrl } from './modules/url'
 
@@ -85,6 +86,7 @@ function main(): void {
   onLangChange(renderAll)
 
   initNav()
+  initOrder()
   initReveal()
 
   // ссылка может указывать на конкретную работу и кадр — открываем их сразу

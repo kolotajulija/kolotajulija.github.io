@@ -1,6 +1,5 @@
 import {
   asset,
-  contactEmail,
   getSlides,
   workDescription,
   workMaterials,
@@ -11,6 +10,7 @@ import {
 } from './content'
 import { updateUrl } from './url'
 import { t } from '../i18n'
+import { startOrder } from './order'
 
 /**
  * Полноэкранный просмотр. Листать можно четырьмя способами: стрелками по краям,
@@ -24,6 +24,13 @@ export function createLightbox(): (index: number) => void {
   const meta = document.getElementById('lightbox-meta')!
   const description = document.getElementById('lightbox-description')!
   const write = document.getElementById('lightbox-write') as HTMLAnchorElement
+  // кнопка «сделать заказ»: закрываем просмотр и ведём в форму с названием
+  write.addEventListener('click', (event) => {
+    event.preventDefault()
+    const title = document.getElementById('lightbox-title')!.textContent ?? ''
+    close()
+    window.setTimeout(() => startOrder(title), 60)
+  })
   const thumbs = document.getElementById('lightbox-thumbs')!
   const prev = document.getElementById('lightbox-prev') as HTMLButtonElement
   const next = document.getElementById('lightbox-next') as HTMLButtonElement
@@ -93,10 +100,8 @@ export function createLightbox(): (index: number) => void {
 
     // письмо открывается с названием работы в теме: человеку не нужно
     // объяснять, о чём он пишет
-    const sold = work.status === 'sold'
-    write.textContent = t(sold ? 'gallery.writeSimilar' : 'gallery.write')
-    const subject = `${workTitle(work)} — ${t(sold ? 'gallery.mailSimilar' : 'gallery.mailAsk')}`
-    write.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`
+    write.textContent = t('gallery.write')
+    write.href = '#contact'
 
     updateUrl({ work: work.id, photo: String(position) })
 

@@ -141,6 +141,31 @@
             </p>
           </header>
           <ul class="contact-list" id="contact-list"></ul>
+
+          <form class="order-form" id="order-form" novalidate>
+            <h3 class="order-title" data-i18n="order.title">Оформить заказ</h3>
+            <p class="order-lead" data-i18n="order.lead">Заполните — письмо уйдёт мне.</p>
+            <div class="order-grid">
+              <label class="field">
+                <span data-i18n="order.name">Как вас зовут</span>
+                <input id="order-name" type="text" name="name" autocomplete="name" />
+              </label>
+              <label class="field">
+                <span data-i18n="order.contact">Почта или телефон</span>
+                <input id="order-contact" type="text" name="contact" autocomplete="email" />
+              </label>
+              <label class="field field-wide">
+                <span data-i18n="order.work">Что хотите заказать</span>
+                <input id="order-work" type="text" name="work" />
+              </label>
+              <label class="field field-wide">
+                <span data-i18n="order.message">Пожелания: размер, камень, сроки</span>
+                <textarea id="order-message" name="message" rows="4"></textarea>
+              </label>
+            </div>
+            <button class="btn btn-primary" type="submit" data-i18n="order.send">Отправить заказ</button>
+            <p class="order-note" id="order-note" role="status"></p>
+          </form>
         </div>
       </section>
     </main>

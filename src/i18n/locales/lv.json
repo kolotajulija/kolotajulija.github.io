@@ -37,8 +37,8 @@
       "art": "Māksla",
       "jewellery": "Juvelierizstrādājumi"
     },
-    "write": "Pajautāt par šo darbu",
-    "writeSimilar": "Pasūtīt līdzīgu",
+    "write": "Veikt pasūtījumu",
+    "writeSimilar": "Veikt pasūtījumu",
     "mailAsk": "jautājums par darbu",
     "mailSimilar": "vēlos līdzīgu"
   },
@@ -106,5 +106,16 @@
   },
   "footer": {
     "note": "Roku darbs, Rīga"
+  },
+  "order": {
+    "title": "Noformēt pasūtījumu",
+    "lead": "Aizpildiet — vēstule atnāks pie manis no jūsu adreses. Parasti atbildu tajā pašā dienā.",
+    "name": "Jūsu vārds",
+    "contact": "E-pasts vai tālrunis",
+    "work": "Ko vēlaties pasūtīt",
+    "message": "Vēlmes: izmērs, akmens, termiņš",
+    "send": "Nosūtīt pasūtījumu",
+    "required": "Lūdzu, norādiet vārdu un kā ar jums sazināties.",
+    "sent": "Vēstule atvērta jūsu pasta programmā — atliek nospiest «Sūtīt». Ja tā neatvērās, rakstiet uz kolotajulija@gmail.com"
   }
 }

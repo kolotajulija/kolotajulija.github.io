@@ -529,9 +529,19 @@ h1, h2, h3 {
 }
 .lightbox-write {
   justify-self: start;
-  margin-top: 0.2rem;
+  margin-top: 0.35rem;
+  /* заметная кнопка: заливка цветом марки, а не строчка текстом */
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--c-accent);
+  border-radius: var(--radius);
+  background: var(--c-accent);
+  color: var(--c-on-accent);
   font-size: var(--step--1);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: transform var(--transition), opacity var(--transition);
 }
+.lightbox-write:hover { transform: translateY(-2px); opacity: 0.92; }
 .lightbox-description { margin: 0; color: var(--c-text-dim); line-height: 1.65; }
 .lightbox-close, .lightbox-nav {
   /* привязка к экрану, а не к содержимому: при прокрутке к описанию
@@ -785,9 +795,11 @@ body.is-locked { overflow: hidden; }
   /* невысокий ноутбук: кнопка «написать» добавила строку, поэтому снимок
      и подпись ужимаются — окно просмотра должно влезать целиком */
   .lightbox-scroll { padding-block: 1.25rem; }
-  #lightbox-image { height: clamp(9rem, 32vh, 30rem); }
-  .lightbox-caption { gap: 0.25rem; }
+  #lightbox-image { height: clamp(9rem, 30vh, 30rem); }
+  .lightbox-caption { gap: 0.15rem; }
   .lightbox-description { line-height: 1.5; }
+  .lightbox-figure { gap: 0.5rem; }
+  .lightbox-write { margin-top: 0.15rem; padding-block: 0.45rem; }
 }
 
 /* ---------- Много кадров у одной работы ---------- */
@@ -816,4 +828,46 @@ body.is-locked { overflow: hidden; }
   }
   .lightbox-thumb { height: 2.9rem; width: 2.9rem; min-height: 2.9rem; }
 }
+
+/* ---------- Форма заказа ---------- */
+.order-form {
+  margin-top: var(--space-l);
+  padding-top: var(--space-l);
+  border-top: var(--border-thin);
+  display: grid;
+  gap: var(--space-s);
+  max-width: 44rem;
+}
+.order-title { font-size: var(--step-1); margin: 0; }
+.order-lead { color: var(--c-text-dim); margin: 0; max-width: 46ch; }
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-s);
+}
+.field { display: grid; gap: 0.35rem; }
+.field-wide { grid-column: 1 / -1; }
+.field span {
+  font-size: var(--step--1);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-text-dim);
+}
+.field input,
+.field textarea {
+  font: inherit;
+  color: var(--c-text);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  width: 100%;
+  transition: border-color var(--transition);
+}
+.field textarea { resize: vertical; min-height: 6rem; }
+.field input:focus-visible,
+.field textarea:focus-visible { outline: none; border-color: var(--c-accent); }
+.order-form .btn { justify-self: start; cursor: pointer; }
+.order-note { margin: 0; color: var(--c-text-dim); font-size: var(--step--1); max-width: 46ch; }
+.order-note.is-warning { color: var(--c-accent); }
 

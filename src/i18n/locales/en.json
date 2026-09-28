@@ -37,8 +37,8 @@
       "art": "Art",
       "jewellery": "Jewellery"
     },
-    "write": "Ask about this piece",
-    "writeSimilar": "Order something similar",
+    "write": "Place an order",
+    "writeSimilar": "Place an order",
     "mailAsk": "a question about this piece",
     "mailSimilar": "I would like something similar"
   },
@@ -106,5 +106,16 @@
   },
   "footer": {
     "note": "Handmade in Riga"
+  },
+  "order": {
+    "title": "Place an order",
+    "lead": "Fill this in and the letter will come to me from your address. I usually reply the same day.",
+    "name": "Your name",
+    "contact": "Email or phone",
+    "work": "What would you like to order",
+    "message": "Wishes: size, stone, timing",
+    "send": "Send the order",
+    "required": "Please add your name and how to reach you.",
+    "sent": "The letter has opened in your mail app — just press Send. If it did not open, write to kolotajulija@gmail.com"
   }
 }
