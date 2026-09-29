@@ -116,6 +116,12 @@
     "message": "Wishes: size, stone, timing",
     "send": "Send the order",
     "required": "Please add your name and how to reach you.",
-    "sent": "The letter has opened in your mail app — just press Send. If it did not open, write to kolotajulija@gmail.com"
+    "sent": "Your request has been sent — it is already in my inbox. I will reply as soon as I read it.",
+    "sending": "Sending…",
+    "fallback": "Sending from the site failed — a letter has been opened in your mail app instead. If it did not open, write to kolotajulija@gmail.com",
+    "mail": "A letter with your request has opened in your mail app — just press Send. If it did not open, copy the request and send it to kolotajulija@gmail.com any way you like.",
+    "copy": "Copy the request",
+    "copied": "Copied",
+    "copyFailed": "Copying failed — please select the text by hand"
   }
 }

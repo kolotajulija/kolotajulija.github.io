@@ -116,6 +116,12 @@
     "message": "Vēlmes: izmērs, akmens, termiņš",
     "send": "Nosūtīt pasūtījumu",
     "required": "Lūdzu, norādiet vārdu un kā ar jums sazināties.",
-    "sent": "Vēstule atvērta jūsu pasta programmā — atliek nospiest «Sūtīt». Ja tā neatvērās, rakstiet uz kolotajulija@gmail.com"
+    "sent": "Pieteikums nosūtīts — tas jau ir manā pastā. Atbildēšu, tiklīdz izlasīšu.",
+    "sending": "Sūtu…",
+    "fallback": "Nosūtīt no vietnes neizdevās — atvēru vēstuli jūsu pasta programmā. Ja tā neatvērās, rakstiet uz kolotajulija@gmail.com",
+    "mail": "Vēstule ar pieteikumu atvērta jūsu pasta programmā — atliek nospiest «Sūtīt». Ja tā neatvērās, nokopējiet pieteikumu un atsūtiet uz kolotajulija@gmail.com jebkādā ērtā veidā.",
+    "copy": "Kopēt pieteikumu",
+    "copied": "Nokopēts",
+    "copyFailed": "Nokopēt neizdevās — lūdzu, iezīmējiet tekstu ar roku"
   }
 }

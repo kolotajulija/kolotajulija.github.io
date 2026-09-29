@@ -870,4 +870,5 @@ body.is-locked { overflow: hidden; }
 .order-form .btn { justify-self: start; cursor: pointer; }
 .order-note { margin: 0; color: var(--c-text-dim); font-size: var(--step--1); max-width: 46ch; }
 .order-note.is-warning { color: var(--c-accent); }
+.order-copy { justify-self: start; cursor: pointer; }
 
