@@ -7,7 +7,7 @@ import { t } from '../i18n'
  * Пока ключа нет, сайт собирает письмо и отдаёт его почтовой программе, а
  * рядом кладёт ту же заявку в буфер обмена: её можно вставить куда угодно.
  */
-const ENDPOINT = '' // например: https://api.web3forms.com/submit
+const ENDPOINT = `https://formsubmit.co/ajax/${contactEmail}`
 
 type Order = { name: string; contact: string; work: string; message: string }
 
@@ -60,12 +60,24 @@ export function initOrder(): void {
       note.textContent = t('order.sending')
       button.disabled = true
       try {
+        const payload: Record<string, string> = {
+          _subject: subject,
+          _template: 'table',
+          _captcha: 'false',
+          [t('order.name')]: order.name,
+          [t('order.contact')]: order.contact,
+        }
+        if (order.work) payload[t('order.work')] = order.work
+        if (order.message) payload[t('order.message')] = order.message
+        if (order.contact.includes('@')) payload._replyto = order.contact
+
         const response = await fetch(ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({ subject, ...order }),
+          body: JSON.stringify(payload),
         })
-        if (!response.ok) throw new Error(String(response.status))
+        const result = (await response.json()) as { success?: string | boolean }
+        if (!response.ok || String(result.success) !== 'true') throw new Error('not sent')
         note.textContent = t('order.sent')
         form.reset()
         copy.hidden = true
