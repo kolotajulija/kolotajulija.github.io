@@ -22,7 +22,7 @@
     "title": "Metāls, kas atceras roku",
     "lead": "Vienā eksemplārā darināti darbi sudrabā, zeltā un akmenī.",
     "cta": "Skatīt darbus",
-    "cta2": "Sazināties"
+    "cta2": "Veikt pasūtījumu"
   },
   "gallery": {
     "eyebrow": "Izlase",
@@ -109,7 +109,7 @@
   },
   "order": {
     "title": "Noformēt pasūtījumu",
-    "lead": "Aizpildiet — vēstule atnāks pie manis no jūsu adreses. Parasti atbildu tajā pašā dienā.",
+    "lead": "Aizpildiet formu — pieteikums nonāks manā pastā. Parasti atbildu tajā pašā dienā.",
     "name": "Jūsu vārds",
     "contact": "E-pasts vai tālrunis",
     "work": "Ko vēlaties pasūtīt",
