@@ -196,6 +196,26 @@
       {
         "small": "images/works/pijons-1-800.jpg",
         "large": "images/works/pijons-1-1600.jpg"
+      },
+      {
+        "small": "images/works/pijons-2-800.jpg",
+        "large": "images/works/pijons-2-1600.jpg"
+      },
+      {
+        "small": "images/works/pijons-3-800.jpg",
+        "large": "images/works/pijons-3-1600.jpg"
+      },
+      {
+        "small": "images/works/pijons-4-800.jpg",
+        "large": "images/works/pijons-4-1600.jpg"
+      },
+      {
+        "small": "images/works/pijons-5-800.jpg",
+        "large": "images/works/pijons-5-1600.jpg"
+      },
+      {
+        "small": "images/works/pijons-6-800.jpg",
+        "large": "images/works/pijons-6-1600.jpg"
       }
     ],
     "collection": {
@@ -320,6 +340,10 @@
       {
         "small": "images/works/kulons-4-800.jpg",
         "large": "images/works/kulons-4-1600.jpg"
+      },
+      {
+        "small": "images/works/kulons-5-800.jpg",
+        "large": "images/works/kulons-5-1600.jpg"
       }
     ],
     "title": {
