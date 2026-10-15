@@ -236,6 +236,7 @@ h1, h2, h3 {
 
 .btn {
   display: inline-block;
+  background: none;
   padding: 0.85rem 1.9rem;
   font-size: var(--step--1);
   letter-spacing: 0.16em;
@@ -857,16 +858,18 @@ body.is-locked { overflow: hidden; }
 .field textarea {
   font: inherit;
   color: var(--c-text);
-  background: var(--c-surface);
-  border: 1px solid var(--c-line);
-  border-radius: var(--radius);
-  padding: 0.7rem 0.9rem;
+  /* без заливки: на странице остаётся только тонкая линия, а не белый прямоугольник */
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--c-line);
+  border-radius: 0;
+  padding: 0.5rem 0;
   width: 100%;
   transition: border-color var(--transition);
 }
-.field textarea { resize: vertical; min-height: 6rem; }
+.field textarea { resize: vertical; min-height: 5rem; }
 .field input:focus-visible,
-.field textarea:focus-visible { outline: none; border-color: var(--c-accent); }
+.field textarea:focus-visible { outline: none; border-bottom-color: var(--c-accent); }
 .order-form .btn { justify-self: start; cursor: pointer; }
 .order-note { margin: 0; color: var(--c-text-dim); font-size: var(--step--1); max-width: 46ch; }
 .order-note.is-warning { color: var(--c-accent); }
