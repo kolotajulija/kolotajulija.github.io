@@ -3,5 +3,14 @@
     "key": "email",
     "value": "kolotajulija@gmail.com",
     "href": "mailto:kolotajulija@gmail.com"
+  },
+  {
+    "key": "location",
+    "value": {
+      "ru": "Музей живого серебра, Burtnieku iela 4, Limbaži",
+      "en": "Silver Museum, Burtnieku iela 4, Limbaži",
+      "lv": "Dzīvā sudraba muzejs, Burtnieku iela 4, Limbaži"
+    },
+    "href": "https://www.google.com/maps/search/?api=1&query=Burtnieku+iela+4%2C+Limba%C5%BEi"
   }
 ]

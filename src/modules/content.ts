@@ -18,7 +18,7 @@ type Work = {
   description: Localized
   collection?: Localized
 }
-type Contact = { key: string; value: string; href: string }
+type Contact = { key: string; value: string | Localized; href: string }
 type Step = { title: string; text: string }
 
 /** Один кадр в лайтбоксе: сам снимок и работа, которой он принадлежит. */
@@ -38,7 +38,7 @@ const works = [...(worksData as Work[])].sort(
 const contacts = contactsData as Contact[]
 
 /** Почта для писем о работах — берётся из контактов, чтобы не расходиться с ними. */
-export const contactEmail = contacts.find((c) => c.key === 'email')?.value ?? ''
+export const contactEmail = String(contacts.find((c) => c.key === 'email')?.value ?? '')
 
 /** Путь к файлу в public/ с учётом base (важно для GitHub Pages). */
 export function asset(path: string): string {
@@ -197,7 +197,7 @@ export function renderContacts(): void {
 
       const value = document.createElement('span')
       value.className = 'contact-value'
-      value.textContent = contact.value
+      value.textContent = typeof contact.value === 'string' ? contact.value : localized(contact.value)
 
       wrapper.append(label, value)
       li.append(wrapper)
