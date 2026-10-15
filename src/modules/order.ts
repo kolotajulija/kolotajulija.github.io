@@ -23,19 +23,7 @@ export function initOrder(): void {
   const form = document.getElementById('order-form') as HTMLFormElement | null
   if (!form) return
   const note = document.getElementById('order-note')!
-  const copy = document.getElementById('order-copy') as HTMLButtonElement
   const button = form.querySelector('button[type="submit"]') as HTMLButtonElement
-  let lastLetter = ''
-
-  copy.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(lastLetter)
-      copy.textContent = t('order.copied')
-    } catch {
-      copy.textContent = t('order.copyFailed')
-    }
-  })
-
   form.addEventListener('submit', async (event) => {
     event.preventDefault()
     const field = (id: string) => document.getElementById(id) as HTMLInputElement | HTMLTextAreaElement
@@ -80,7 +68,6 @@ export function initOrder(): void {
         if (!response.ok || String(result.success) !== 'true') throw new Error('not sent')
         note.textContent = t('order.sent')
         form.reset()
-        copy.hidden = true
         return
       } catch {
         // ниже — обычный путь через почтовую программу
@@ -89,10 +76,7 @@ export function initOrder(): void {
       }
     }
 
-    lastLetter = `${subject}\n\n${letterBody(order)}`
     note.textContent = t('order.mail')
-    copy.hidden = false
-    copy.textContent = t('order.copy')
     const letter = document.createElement('a')
     letter.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(letterBody(order))}`
     letter.rel = 'noopener'
